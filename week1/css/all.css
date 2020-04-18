@@ -53,7 +53,7 @@ table {
   font-family: 'Noto Sans TC';
   font-style: normal;
   font-weight: 400;
-  src: local("Noto Sans TC Regular"), local("NotoSansTC-Regular"), url("../../fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2") format("woff2"), url("../../fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff") format("woff");
+  src: local("Noto Sans TC Regular"), local("NotoSansTC-Regular"), url("../../../source/typography/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2") format("woff2"), url("../../../source/typography/noto-sans-tc-v10-latin_chinese-traditional-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
@@ -62,7 +62,7 @@ table {
   font-family: 'Noto Sans TC';
   font-style: normal;
   font-weight: 700;
-  src: local("Noto Sans TC Bold"), local("NotoSansTC-Bold"), url("../../fonts/noto-sans-tc-v10-latin_chinese-traditional-700.woff2") format("woff2"), url("../../fonts/noto-sans-tc-v10-latin_chinese-traditional-700.woff") format("woff");
+  src: local("Noto Sans TC Bold"), local("NotoSansTC-Bold"), url("../../../source/typography/noto-sans-tc-v10-latin_chinese-traditional-700.woff2") format("woff2"), url("../../../source/typography/noto-sans-tc-v10-latin_chinese-traditional-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
