@@ -1,0 +1,140 @@
+*{
+  box-sizing: border-box;
+  position: relative;
+}
+body{
+  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+  font-weight: regular;
+}
+
+//section 設定
+.sectionSet{
+  width: 100%;
+}
+.container{
+  max-width: 1200px;
+  width: 100%;
+  padding: 40px 0;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;  
+  @include medium{
+    padding: 40px 15px;
+  }
+}
+
+//helper css
+.pseudo-point::before{
+  @include pseudo-el-style(22px, 22px, $secondary);
+  left: -16px;
+  top: 50%;
+  transform: translate(-100%,-50%);
+  border-radius: 50px
+}
+
+
+
+.header{
+  max-height: 960px;
+  height: 120vh;
+  @include backgroundImage('../../images/banner.png',center,cover);
+  .container{
+    height: 100vh;
+  }
+  .txtWrap{
+    max-width: 283px;
+  }
+  h1{
+    font-size: 5em;
+    font-size: 5rem;
+    line-height: 5.875em;
+    line-height: 5.875rem;
+  }
+  h3{
+    @include line-height(1.75);
+    
+  }
+  ul{
+    justify-content: space-between;
+  }
+}
+
+.title-text{
+  margin: 24px 0;
+  font-size: 3.5555em;
+  font-size: 3.5555rem;
+  line-height: 4.687em;
+  line-height: 4.687rem;
+  font-weight: 500;
+}
+
+.about{
+  .txtWrap{
+    max-width: 411px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+    max-width: 384px;
+    height: auto;
+  }
+  ul{
+    @include line-height(1.5);
+  }
+}
+.profile{
+  margin-bottom: 3.125rem;
+  &:before{
+    @include pseudo-el-style(1px,100%,$black);
+    max-width: 384px;
+    bottom: -1.5625em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
+  }
+}
+.profile li{
+  margin-top: 0.5em;
+}
+.experience li{
+  margin: 1em auto;
+  display: inline-block;
+  margin-left: 38px;
+}
+
+.brand{
+  .container{
+    padding-bottom: 140px;
+  }
+  h2{
+    margin-bottom: 1rem;
+  }
+  h3{
+    @include line-height(2.1);
+  }
+}
+
+.works{
+  @include backgroundImage('../../images/photo-1.png', center, cover);
+  h3{
+    @include line-height(2.1);
+  }
+  .imgWrap{
+    width: 100%;
+    margin-bottom: 38px;
+    p{
+      margin: 18px 0;
+    }
+  }
+}
+
+.footer{
+  .container{
+    padding-bottom: 64px;
+  }
+  .title-text,p{
+    margin-bottom: 16px;
+  }
+}

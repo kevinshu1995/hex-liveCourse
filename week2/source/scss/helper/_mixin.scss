@@ -1,0 +1,32 @@
+@mixin pseudo-el{
+  content: '';
+  position: absolute;
+}
+@mixin pseudo-el-style ($height, $width, $color){
+  @include pseudo-el;
+  height: $height;
+  width: $width;
+  background-color: $color;
+}
+
+@mixin backgroundImage ($url, $position, $size){
+  background-image: url($url);
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin line-height($value){
+  line-height: #{$value}em;
+}
+
+@mixin medium{
+  @media screen and ( max-width: 1023px) {
+    @content
+  }
+};
+
+@mixin large{
+  @media screen and ( max-width: 1191px) {
+    @content
+  }
+}
