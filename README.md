@@ -22,11 +22,11 @@
 <br>
 * 使用 Gulp 編譯 Pug
 <br>  
-* pug 編譯路徑 ../public
+--- pug 編譯路徑 ../public
 <br>
 * 使用 VS Code live Sass compile 編譯 SASS
 <br>
-  * SASS 編譯路徑 ../public/dist/style
+--- SASS 編譯路徑 ../public/dist/style
 <br>
 
 ## Language
