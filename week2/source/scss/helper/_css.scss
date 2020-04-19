@@ -1,0 +1,131 @@
+.l-flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.l-flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.l-flex-wrap{
+  flex-wrap: wrap;
+}
+
+.l-flex-main-center{
+  justify-content: center;
+}
+.l-flex-main-space-around{
+  justify-content: space-around;
+}
+
+.l-text-align-center{
+  text-align: center;
+}
+
+
+// font,bg color
+@each $name, $color in $colors {
+  .s {
+    &-bg-#{$name} {
+      background-color: $color;
+    }
+    &-text-#{$name} {
+      color: $color;
+    }
+    @for $i from 1 through 2 {
+      &-border-#{$i}-#{$name} {
+        border: $i#{px} solid $color;
+      }
+      &-border-b-#{$i}-#{$name} {
+        border-bottom: $i#{px} solid $color;
+      }
+      &-border-t-#{$i}-#{$name} {
+        border-top: $i#{px} solid $color;
+      }
+      &-border-r-#{$i}-#{$name} {
+        border-right: $i#{px} solid $color;
+      }
+      &-border-l-#{$i}-#{$name} {
+        border-left: $i#{px} solid $color;
+      }
+    }
+  }
+}
+
+@each $name, $style in $font-style{
+  .s {
+    &-fontStyle-#{$name}{
+      font-style: $style;
+    }
+  }
+}
+
+// font-size 工具
+@each $name, $font in $fonts {
+  .s {
+    &-text-#{$name} {
+      font-size: $font;
+    }
+  }
+}
+
+// font-weight 工具
+@each $name, $value in $font-weights {
+  .s {
+    &-text-weight-#{$name} {
+      font-weight: $value;
+    }
+  }
+};
+
+// margin padding 工具
+@each $name, $value in $spacing {
+  .s {
+    &-p-#{$name} {
+      padding: $value;
+    }
+    &-pl-#{$name} {
+      padding-left: $value;
+    }
+    &-pr-#{$name} {
+      padding-right: $value;
+    }
+    &-pt-#{$name} {
+      padding-top: $value;
+    }
+    &-pb-#{$name} {
+      padding-bottom: $value;
+    }
+    &-py-#{$name} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+    &-px-#{$name} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+    &-m-#{$name} {
+      margin: $value;
+    }
+    &-ml-#{$name} {
+      margin-left: $value;
+    }
+    &-mr-#{$name} {
+      margin-right: $value;
+    }
+    &-mt-#{$name} {
+      margin-top: $value;
+    }
+    &-mb-#{$name} {
+      margin-bottom: $value;
+    }
+    &-my-#{$name} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+    &-mx-#{$name} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+  }
+}
+
