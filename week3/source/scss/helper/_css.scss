@@ -1,29 +1,34 @@
-.l-flex-row{
+.l-flex-row {
   display: flex;
   flex-direction: row;
 }
-.l-flex-column{
+.l-flex-column {
   display: flex;
   flex-direction: column;
 }
-.l-flex-wrap{
+.l-flex-wrap {
   flex-wrap: wrap;
 }
 
-.l-flex-main-center{
+.l-flex-justify-content-center {
   justify-content: center;
 }
-.l-flex-main-space-between{
+.l-flex-justify-content-between {
   justify-content: space-between;
 }
-.l-flex-main-space-around{
+.l-flex-justify-content-around {
   justify-content: space-around;
 }
-
-.l-text-align-center{
-  text-align: center;
+.l-flex-justify-content-end {
+  justify-content: flex-end;
+}
+.l-flex-align-items-center {
+  align-items: center;
 }
 
+.l-text-align-center {
+  text-align: center;
+}
 
 // font,bg color
 @each $name, $color in $colors {
@@ -54,9 +59,9 @@
   }
 }
 
-@each $name, $style in $font-style{
+@each $name, $style in $font-style {
   .s {
-    &-fontStyle-#{$name}{
+    &-fontStyle-#{$name} {
       font-style: $style;
     }
   }
@@ -78,7 +83,7 @@
       font-weight: $value;
     }
   }
-};
+}
 
 // margin padding 工具
 @each $name, $value in $spacing {
@@ -131,4 +136,3 @@
     }
   }
 }
-
