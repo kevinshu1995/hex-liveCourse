@@ -2,7 +2,7 @@ extend ./layout.pug
 
 block content
 	.header.sectionSet
-		.container.l-flex-row
+		.container.l-flex-row.l-flex-align-items-center.l-flex-main-center
 			.txtWrap.s-text-white
 				h2.s-text-3.s-fontStyle-i.s-text-weight-1 Here's
 				h1.s-fontStyle-i.s-text-weight-3 JOANNE
@@ -21,7 +21,7 @@ block content
 						a(href="#")
 							img(src="images/youtube.svg", alt="youtube")
 	.about.sectionSet.l-text-align-center
-		.container
+		.container.l-flex-align-items-center.l-flex-main-center
 			.txtWrap.l-flex-column.s-text-weight-2
 				h2.title-text About
 				img.s-my-3(src="images/photo.png", alt="avatar")
@@ -34,7 +34,7 @@ block content
 					li.pseudo-point Graphic Designer
 					li.pseudo-point Graphic Intern of Hex School
 	.brand.sectionSet.l-text-align-center.s-bg-black.s-text-white
-		.container.l-flex-column
+		.container.l-flex-column.l-flex-align-items-center.l-flex-main-center
 			h2.title-text My Brand "XXXD"
 			h3.s-text-3.s-mb-6 Just Keep XXXD Everyday
 			h3.s-text-3.s-mb-5
@@ -46,12 +46,12 @@ block content
 				img.s-my-4(src="images/brand_img2.png", alt="Brand image")
 				img.s-my-4(src="images/brand_img3.png", alt="Brand image")
 	.works.sectionSet.l-text-align-center
-		.container.l-flex-column
+		.container.l-flex-column.l-flex-align-items-center.l-flex-main-center
 			h2.title-text Other Works
 			h3.s-mb-7 
 				| 2016-2020 年累積的作品 
 				| <br>海報/廣告/攝影/LOGO/3D
-			ul.imgWrap.l-flex-row.l-flex-wrap.l-flex-main-space-around.s-text-white
+			ul.imgWrap.l-flex-row.l-flex-main-space-between.s-text-white
 				li
 					img(src="images/work_img1.png", alt="work images")
 					p 海報設計/2017
@@ -61,14 +61,14 @@ block content
 				li
 					img(src="images/work_img3.png", alt="work images")
 					p 海報設計/2018
-			ul.imgWrap.l-flex-row.l-flex-wrap.l-flex-main-space-around.s-text-white.imgWrap-2pictures
+			ul.imgWrap.l-flex-row.l-flex-main-space-between.s-text-white
 				li
 					img(src="images/work_img4.png", alt="work images")
 					p 概念攝影/2018
 				li
 					img(src="images/work_img5.png", alt="work images")
 					p 概念攝影/2018
-			ul.imgWrap.l-flex-row.l-flex-wrap.l-flex-main-space-around.s-text-white
+			ul.imgWrap.l-flex-row.l-flex-main-space-between.s-text-white
 				li
 					img(src="images/work_img6.png", alt="work images")
 					p sasa 酒標設計/2019
@@ -79,7 +79,7 @@ block content
 					img(src="images/work_img8.png", alt="work images")
 					p 官網設計/2020
 	.footer.sectionSet.l-text-align-center.s-bg-black.s-text-white
-		.container.l-flex-column
+		.container.l-flex-column.l-flex-align-items-center.l-flex-main-center
 			h2.title-text Contact
 			p.s-mb-7 Mail：xxxd@hexschool.com
 			p.s-mb-7 Phone Number：0910123456

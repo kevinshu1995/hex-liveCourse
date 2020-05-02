@@ -97,9 +97,21 @@ table {
           justify-content: center;
 }
 
+.l-flex-main-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .l-flex-main-space-around {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.l-flex-align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .l-text-align-center {
@@ -805,8 +817,12 @@ table {
 }
 
 body {
-  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
   font-weight: regular;
+}
+
+img {
+  display: block;
 }
 
 .sectionSet {
@@ -815,21 +831,7 @@ body {
 
 .container {
   max-width: 1200px;
-  width: 100%;
-  padding: 40px 0;
   margin: 0 auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-width: 1023px) {
-  .container {
-    padding: 40px 15px;
-  }
 }
 
 .pseudo-point::before {
@@ -854,7 +856,14 @@ body {
 }
 
 .header .container {
+  padding: 40px 0;
   height: 100vh;
+}
+
+@media screen and (max-width: 1023px) {
+  .header .container {
+    padding: 40px 15px;
+  }
 }
 
 .header .txtWrap {
@@ -885,6 +894,16 @@ body {
   line-height: 4.687em;
   line-height: 4.687rem;
   font-weight: 500;
+}
+
+.about .container {
+  padding: 40px 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .about .container {
+    padding: 40px 15px;
+  }
 }
 
 .about .txtWrap {
@@ -927,17 +946,25 @@ body {
 }
 
 .profile li {
-  margin-top: 0.5em;
+  margin-top: 0.3333em;
+  line-height: 1.75em;
 }
 
 .experience li {
-  margin: 1em auto;
+  margin: 0.75em auto;
   display: inline-block;
   margin-left: 38px;
 }
 
 .brand .container {
+  padding-top: 40px;
   padding-bottom: 140px;
+}
+
+@media screen and (max-width: 1023px) {
+  .brand .container {
+    padding: 40px 15px;
+  }
 }
 
 .brand h2 {
@@ -950,12 +977,24 @@ body {
 
 .works {
   background-image: url("../../images/photo-1.png");
-  background-position: center;
-  background-size: cover;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .works h3 {
   line-height: 2.1em;
+}
+
+.works .container {
+  padding-top: 40px;
+  padding-bottom: 104px;
+}
+
+@media screen and (max-width: 1023px) {
+  .works .container {
+    padding: 40px 15px;
+  }
 }
 
 .works .imgWrap {
@@ -967,11 +1006,23 @@ body {
   margin: 18px 0;
 }
 
+.works .imgWrap img {
+  width: 100%;
+}
+
 .footer .container {
+  padding-top: 40px;
   padding-bottom: 64px;
 }
 
-.footer .title-text, .footer p {
+@media screen and (max-width: 1023px) {
+  .footer .container {
+    padding: 40px 15px;
+  }
+}
+
+.footer .title-text,
+.footer p {
   margin-bottom: 16px;
 }
 /*# sourceMappingURL=all.css.map */
