@@ -819,9 +819,12 @@ table {
 body {
   font-family: "Roboto", "Noto Sans TC", sans-serif;
   font-weight: regular;
+  overflow-x: hidden;
 }
 
 img {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -918,7 +921,6 @@ img {
 }
 
 .about img {
-  max-width: 384px;
   height: auto;
 }
 
@@ -975,6 +977,10 @@ img {
   line-height: 2.1em;
 }
 
+.brand .imgWrap {
+  max-width: 100%;
+}
+
 .works {
   background-image: url("../../images/photo-1.png");
   background-position: bottom;
@@ -998,7 +1004,6 @@ img {
 }
 
 .works .imgWrap {
-  width: 100%;
   margin-bottom: 38px;
 }
 
