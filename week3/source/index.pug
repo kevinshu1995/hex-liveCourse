@@ -1,29 +1,123 @@
 extend ./layout.pug
 
 block content
-    header.header.s-bg-primary.s-text-white
-        nav.navbar.l-flex-row.l-flex-align-items-center
-            .bar.padDesktop--noShow.s-text-3
-                a
-                    i.fas.fa-bars
-            .logo
-                a(href="#")
-                    img(src="images/logo.png", alt="")
-            ul.menu.l-flex-row.mobile--show.l-flex-align-items-center.s-text-2.s-bg-primary
-                li
-                    a(href="#")
-                        | 系列鏡框
-                li
-                    a(href="#")
-                        | 門市據點
-                li
-                    a(href="#")
-                        | 部落格
-                li
-                    a(href="#")
-                        | 常見問題
-    section.landing-page
+    section.landing-page.fixNavTop
         .container.l-flex-row.l-flex-align-items-center.l-flex-justify-content-end
             .txt.s-text-secondary
                 h2.s-text.s-text-weight-2 Promise-Desert 2020 早春系列
                 p.s-text-weight-2 看得清，才能看得遠
+    section.feature
+        .container
+            h2.l-title.s-text-secondary.s-text-weight-3.l-text-align-center 用專業的心，做專業的事
+            ul.cards.l-flex-row.l-flex-justify-content-around.l-flex-wrap
+                li.l-flex-column.l-flex-align-items-center
+                    .imgWrap.l-flex-column.l-flex-justify-content-center
+                        img(src="images/icon-dollar.svg" alt="")
+                    h3.s-text-secondary.s-text-weight-2 單一價格
+                    p 無論任何度數皆不需追加費用 即可擁有適合自己的薄型球面 鏡片。
+                li.l-flex-column.l-flex-align-items-center
+                    .imgWrap.l-flex-column.l-flex-justify-content-center
+                        img(src="images/icon-clock.svg" alt="")
+                    h3.s-text-secondary.s-text-weight-2 20 分鐘即可取件
+                    p 為了您的寶貴時間著想，以豐 富專業知識與技術將結帳到交 件的時間縮減至最快 20 分鐘 即可完成。
+                li.l-flex-column.l-flex-align-items-center
+                    .imgWrap.l-flex-column.l-flex-justify-content-center
+                        img(src="images/icon-heart.svg" alt="")
+                    h3.s-text-secondary.s-text-weight-2 安心售後服務
+                    p 我們提供長達 120 天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。
+                li.l-flex-column.l-flex-align-items-center
+                    .imgWrap.l-flex-column.l-flex-justify-content-center
+                        img(src="images/icon-glasses.svg" alt="")
+                    h3.s-text-secondary.s-text-weight-2 關於鏡片
+                    p 使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。  
+    section.series
+        .container
+            h2.l-title.s-text-secondary.s-text-weight-3.l-text-align-center 經典系列鏡框
+            ul
+                li.l-flex-row.l-align-items-center
+                    img.series__img(src="images/product-1.png" alt="")
+                    .seriesTxtWrap.l-flex-row.l-flex-align-items-center.l-flex-justify-content-center
+                        img.js-iconChanging1(src="images/icon-diamond.svg" alt="")
+                        h3 OPTICAL
+                li.l-flex-row.l-align-items-center.series__reverse
+                    img.series__img(src="images/product-2.png" alt="")
+                    .seriesTxtWrap.l-flex-row.l-flex-align-items-center.l-flex-justify-content-center
+                        img.js-iconChanging2(src="images/icon-sun.svg" alt="")
+                        h3 SUNGLASSES
+                li.l-flex-row.l-align-items-center
+                    img.series__img(src="images/product-3.png" alt="")
+                    .seriesTxtWrap.l-flex-row.l-flex-align-items-center.l-flex-justify-content-center
+                        img.js-iconChanging3(src="images/icon-thunder.svg" alt="")
+                        h3 FUNCTIONAL
+    section.design
+        .container
+            h2.l-title.s-text-white.s-text-weight-3.l-text-align-center 聯名設計鏡框
+        //- .design__imgWrap.l-flex-row
+        //-     .imgWrap.s-mr-1
+        //-         img(src="images/product-4.png" alt="")
+        //-     .imgWrap.l-flex-column
+        //-         img.s-mb-1(src="images/product-5.png" alt="")
+        //-         .imgWrap.l-flex-row
+        //-             .imgWrap.s-mr-1
+        //-                 img(src="images/product-6.png" alt="")
+        //-             .imgWrap.l-flex-column
+        //-                 img(src="images/product-7.png" alt="")
+        //-                 p.more.l-flex-row.l-flex-justify-content-center.l-flex-align-items-center
+        //-                     span MORE
+        .container.crossover.l-flex-row.l-flex-wrap.l-flex-justify-content-between
+            .imgWrap
+                h3.s-text-primary.s-text-weight-3.l-text-align-center Double A+
+                img(src="images/product-8.png" alt="")
+            .imgWrap
+                h3.s-text-primary.s-text-weight-3.l-text-align-center YOUTH
+                img(src="images/product-9.png" alt="")
+        .container.recommend
+            h2.l-title.s-text-white.s-text-weight-3.l-text-align-center 聯名設計鏡框
+            ul.l-flex-row.l-flex-wrap.l-flex-justify-content-between
+                li.card.s-bg-white.s-mb-3
+                    img.s-pb-3(src="images/rec-1.png" alt="")
+                    .card__content
+                        h3.s-pb-3 Jessy
+                        p.s-pb-3 This is a wider card with supporting text below as a natural lead-in to additional content.
+                        p.s-pb-3.s-text-light-gray Last updated 3 mins ago
+                li.card.s-bg-white.s-mb-3
+                    img.s-pb-3(src="images/rec-2.png" alt="")
+                    .card__content
+                        h3.s-pb-3 Karen
+                        p.s-pb-3 This is a wider card with supporting text below as a natural lead-in to additional content.
+                        p.s-pb-3.s-text-light-gray Last updated 3 mins ago
+                li.card.s-bg-white.s-mb-3
+                    img.s-pb-3(src="images/rec-3.png" alt="")
+                    .card__content
+                        h3.s-pb-3 Jessy
+                        p.s-pb-3 This is a wider card with supporting text below as a natural lead-in to additional content.
+                        p.s-pb-3.s-text-light-gray Last updated 3 mins ago
+                li.card.s-bg-white.s-mb-3
+                    img.s-pb-3(src="images/rec-4.png" alt="")
+                    .card__content
+                        h3.s-pb-3 Jessy
+                        p.s-pb-3 This is a wider card with supporting text below as a natural lead-in to additional content.
+                        p.s-pb-3.s-text-light-gray Last updated 3 mins ago
+    section.contact.s-bg-primary-light
+        .container.container-contact
+            h2.l-title.s-text-black.s-text-weight-3.l-text-align-center 聯絡我們
+            p 我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。
+            .form-group
+                h3 姓名
+                input.s-bg-primary-light(name="name" id="input-name" type="text" placeholder="陳小明")
+            .form-group
+                h3 聯絡電話
+                input.s-bg-primary-light(name="tel" id="input-tel" type="tel" placeholder="0912-345-678")
+            .form-group
+                h3 電子郵件
+                input.s-bg-primary-light(name="email" id="input-email" type="email" placeholder="example@email.com")
+            .form-group
+                h3 意見反應
+                textarea.s-bg-primary-light(name="comment" id="input-comment" cols="30" rows="10" placeholder="請輸入您的意見")
+            .form-group.checkboxWrap(for="input-check")
+                label
+                    input(name="check" id="input-check" class="input-check" type="checkbox")
+                    span.checkbox
+                    h4.s-pl-4 我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。
+            .submitWrap.l-text-align-center
+                button.submit.l-text-align-center.s-bg-primary.s-text-white.s-text-1(type="submit") 確認送出

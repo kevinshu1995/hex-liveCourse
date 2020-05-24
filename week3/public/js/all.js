@@ -8,4 +8,10 @@ $(function () {
       $('.menu').removeClass('js--menu-show')
     }
   })
+  $('#tab').find('.tab-body').hide();
+  $('#tab').find('.js-defaultShow').show();
+  $('.tab-head').on('click', function () {
+    $(this).next('.tab-body').stop().slideToggle();
+    $(this).toggleClass('active');
+  })
 })

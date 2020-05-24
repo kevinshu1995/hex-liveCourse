@@ -1,28 +1,36 @@
 //顏色變數
-$primary: #AA0601;
+$primary: #aa0601;
+$primary-light: #aa06010d;
 $secondary: #650300;
+$third: #aa06010d;
 // $warning: #96A9C4;
+
 $white: #fff;
 $black: #000;
+$light-gray: #707070;
+$lighter-gray: #f2f2f2;
 
-$colors:(
-  primary: #AA0601,
+$colors: (
+  primary: #aa0601,
+  primary-light: #aa06010d,
   secondary: #650300,
   // warning: #96A9C4,
-  white: #fff,
+    white: #fff,
   black: #000,
+  light-gray: #707070,
+  lighter-gray: #f2f2f2,
 );
 
 $font-base-size: 1rem;
-$font-base-md-size: .75rem;
-$font-base-lg-size: .875rem;
+$font-base-md-size: 0.75rem;
+$font-base-lg-size: 0.875rem;
 
-$font-style:(
+$font-style: (
   n: normal,
-  i: italic,  
+  i: italic,
 );
 
-$fonts:(
+$fonts: (
   1: $font-base-size * 1,
   2: $font-base-size * 1.25,
   3: $font-base-size * 1.5,
@@ -34,9 +42,9 @@ $font-weights: (
   3: 900,
 );
 
-$spacing:(
-  1: $font-base-size * .5,
-  2: $font-base-size * .875,
+$spacing: (
+  1: $font-base-size * 0.5,
+  2: $font-base-size * 0.875,
   3: $font-base-size * 1,
   4: $font-base-size * 1.25,
   5: $font-base-size * 1.75,
