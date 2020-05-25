@@ -1,0 +1,24 @@
+extend ./modules/layout.pug
+
+block append head
+    title document
+    link(rel="stylesheet", href="assets/style/all.css")
+    script(src="assets/js/vendors.js")
+    script(src="assets/js/all.js")
+
+    //- font-family: 'Lato', sans-serif;
+    //- font-family: 'Roboto Mono', monospace;
+    //- icons https://material.io/resources/icons/?style=baseline 
+
+block content
+    .container
+        .card(style='width: 18rem;')
+            img.card-img-top(src='', alt='')
+        .card-body
+            h5.card-title Card title
+            p.card-text
+                | Some quick example text to build on the card title and make up the bulk of the card's content.
+            a.btn.btn-primary(href='#') Go somewhere
+
+block footer
+    include ./modules/footer
