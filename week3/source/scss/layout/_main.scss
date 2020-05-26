@@ -199,6 +199,30 @@ a {
     padding: 64px 0 80px;
   }
   background-color: $third;
+  .order-md-first {
+    order: 1;
+    @include desktop {
+      order: unset;
+    }
+  }
+  .order-md-sec {
+    order: 2;
+    @include desktop {
+      order: unset;
+    }
+  }
+  .order-md-third {
+    order: 3;
+    @include desktop {
+      order: unset;
+    }
+  }
+  .order-md-forth {
+    order: 4;
+    @include desktop {
+      order: unset;
+    }
+  }
   .cards {
     @include line-height(1.5);
     li {
@@ -260,6 +284,7 @@ a {
       margin-bottom: 60px;
     }
   }
+
   ul {
     width: 100%;
     li {
@@ -332,11 +357,15 @@ a {
 
 .design {
   @include backgroundImage("../../images/bg.png", center, cover);
+  background-repeat: no-repeat;
+  background-position-y: -1690px;
   padding-top: 24px;
   @include pad {
     padding-top: 40px;
+    background-position-y: -600px;
   }
   @include desktop {
+    background-position-y: -300px;
     padding-top: 64px;
   }
   .design__imgWrap {
@@ -473,7 +502,7 @@ a {
       width: 23.5%;
     }
     .card__content {
-      padding: 0 16px;
+      padding: 1rem 16px 0;
     }
   }
 }
@@ -592,11 +621,30 @@ a {
   }
 }
 .submit {
+  cursor: pointer;
   margin-top: 26px;
   padding-top: 16px;
   padding-bottom: 16px;
   width: 180px;
   @include line-height(1.5);
+  &:before {
+    content: "確認送出";
+    background-color: $primary;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 56px;
+    transition: 0.3s;
+  }
+  &:hover {
+    background-color: $secondary;
+    &:before {
+      width: 120%;
+      transition: 0.3s;
+    }
+  }
 }
 
 .footer {
