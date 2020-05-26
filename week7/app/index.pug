@@ -3,6 +3,7 @@ extend ./modules/layout.pug
 block append head
     title Week07 - 個人履歷 & AOS 視差滾動
     link(rel="stylesheet", href="https://unpkg.com/aos@next/dist/aos.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css")
     link(rel="stylesheet", href="assets/style/all.css")
     script(src="https://unpkg.com/aos@next/dist/aos.js")
     script(src="assets/js/all.js")
@@ -11,85 +12,85 @@ block append head
 block content
     .main
         .wrap
-            .header(data-aos="fade-down-right")
+            .header(data-aos="animate__flipInX")
                 h1
                     | Joanne 
                     br
                     |  Chen
                 img(src='https://hexschool.github.io/webLayoutTraining1st/week1/photo.png')
             .content
-                .content__header(data-aos="fade-down-right")
+                .content__header(data-aos="animate__flipInX")
                     h2
                         | 個人資料
                         span.mark PROFILE
                 .content__body
-                    h3.pseudo-point(data-aos="fade-down-right")
+                    h3.pseudo-point(data-aos="animate__flipInX")
                         | 陳久安 Joanne Chen
                         br
                         |  1997-
                         br
                         | 應屆畢業生／接案設計師／UI 設計實習生
-                    p(data-aos="fade-down-right")
+                    p(data-aos="animate__flipInX")
                         | UI 設計修行中／立志當斜槓青年
                         br
                         |  獨立接案，內容涵蓋：
                         br
                         |  品牌規劃、視覺設計、編輯設計、標準字、物件及印刷品設計等。
             .content
-                .content__header(data-aos="fade-down-right")
+                .content__header(data-aos="animate__flipInX")
                     h2
                         | 學歷 
                         span.mark EDUCATION
-                ul.content__body.content__listLine(data-aos="fade-down-right")
+                ul.content__body.content__listLine(data-aos="animate__flipInX")
                     li.pseudo-point 國立六角師範大學 視覺設計學系 學士學位 | 2016－2020
                     li.pseudo-point 國立六腳高級中學 美術班 | 2013－2016
     .main.l-bg-w100
         .wrap
             .content.content--center
-                .content__header(data-aos="fade-down-right")
+                .content__header(data-aos="animate__slideInLeft")
                     h2
                         | 技能
                         span.mark SKILLs
                 ul.content__body
-                    li(data-aos="fade-right") Adobe Photoshop
-                    li(data-aos="fade-right") Adobe Illustrator
-                    li(data-aos="fade-right") Adobe XD
-                    li(data-aos="fade-right") Adobe Indesign
-                    li(data-aos="fade-right") C4D
-                    li(data-aos="fade-right") Adobe Premiere
-                    li(data-aos="fade-right") 語言：中文、英文
+                    li(data-aos="animate__slideInLeft") Adobe Photoshop
+                    li(data-aos="animate__slideInLeft") Adobe Illustrator
+                    li(data-aos="animate__slideInLeft") Adobe XD
+                    li(data-aos="animate__slideInLeft") Adobe Indesign
+                    li(data-aos="animate__slideInLeft") C4D
+                    li(data-aos="animate__slideInLeft") Adobe Premiere
+                    li(data-aos="animate__slideInLeft") 語言：中文、英文
     .main
         .wrap
             .content
-                .content__header(data-aos="fade-down-right")
+                .content__header(data-aos="animate__zoomInLeft")
                     h2
                         | 工作經驗
                         span.mark WORK EXPERIENCE
                 ul.content__body.content__timeLine
-                    li(data-aos="fade-down-right")
+                    li(data-aos="animate__zoomInLeft")
                         h3 六角學院 視覺設計實習生 | 2019/07－2020/06
                         img(src='https://hexschool.github.io/webLayoutTraining1st/week1/Group 1.svg')
                         p
                             | 在六角學院長達一年的實習中，前期藉由公司課程掌握 HTML, CSS, Adobe XD，設計給學員使用的名片設計教材，並參與六角週年活動，設計各式周邊商品及活動網路宣傳圖。後期進入
                             | UI
                             | 設計範疇，設計六角共筆部落格 - W3HexSchool、六角發案服務網介面設計、供給學員的教案- RWD官方網站設計，並設計各式網頁活動宣傳圖。
-                    li(data-aos="fade-down-right")
+                    li(data-aos="animate__zoomInLeft")
                         h3 獨立接案 Hao Jun 酒標設計 | 2019
-                    li(data-aos="fade-down-right")
+                    li(data-aos="animate__zoomInLeft")
                         h3 獨立接案 Exulans 酒標設計 | 2019
-                    li(data-aos="fade-down-right")
+                    li(data-aos="animate__zoomInLeft")
                         h3 獨立接案 桃園平鎮市民健走活動提案 | 2019
-                    li(data-aos="fade-down-right")
+                    li(data-aos="animate__zoomInLeft")
                         h3 Simtree 興趣咖啡 工讀生 | 2018－2019
                         img(src='https://hexschool.github.io/webLayoutTraining1st/week1/simtree.png')
                         p 擔任外場及吧台服務生，學習咖啡相關知識。
     .footer
         .wrap
-            .content__header(data-aos="fade-left")
+            .content__header(data-aos="animate__lightSpeedInLeft")
                 h2
                     | 聯絡方式 
                     span.mark CONTACT METHOD
-            ul.txt(data-aos="fade-left")
+            ul.txt(data-aos="animate__lightSpeedInLeft")
                 li Mail：xxxd@hexschool.com
                 li Phone：0910123456
                 li Kaohsiung, Taiwan
