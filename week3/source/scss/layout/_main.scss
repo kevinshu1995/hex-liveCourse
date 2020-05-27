@@ -1,0 +1,858 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  font-weight: normal;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+button {
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+.container {
+  // padding: 0 15px;
+  margin: 0 auto;
+  max-width: 352px;
+  @include pad {
+    max-width: 672px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+
+.l-title {
+  padding-bottom: 12px;
+  font-size: 1.5rem;
+  @include pad {
+    font-size: 2rem;
+  }
+  @include desktop {
+    padding-bottom: 44px;
+    font-size: 3rem;
+  }
+}
+
+.padDesktop--noShow {
+  display: block;
+  @include pad {
+    display: none;
+  }
+}
+.mobile--show {
+  display: none;
+  @include pad {
+    display: flex;
+  }
+}
+.js--menu-show {
+  display: block;
+  li {
+    display: block;
+    &:before {
+      @include pseudo-el-style(1px, 100vw, $white);
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 0 16px;
+  min-height: 50px;
+  @include pad {
+    padding: 30px 48px;
+  }
+  @include desktop {
+    padding: 30px 88px;
+  }
+}
+.fixNavTop {
+  padding-top: 51.4px;
+  @include pad {
+    padding-top: 120px;
+  }
+}
+.navbar {
+  justify-content: center;
+  flex-direction: column;
+  @include pad {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+.bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  a {
+    display: inline-block;
+    padding: 0.5em;
+  }
+}
+.logo {
+  align-self: center;
+  a {
+    display: inline-block;
+    padding: 10px 0;
+    @include pad {
+      padding: 0;
+    }
+  }
+  img {
+    max-width: 48px;
+    @include pad {
+      max-width: 80px;
+    }
+  }
+}
+
+.menu {
+  width: 100%;
+  @include pad {
+    width: auto;
+  }
+  li {
+    line-height: 1.875rem;
+    padding: 15px 0;
+    text-align: center;
+    // border-top: 2px solid $white;
+    // @include pad {
+    //   border-top: none;
+    // }
+    & + li {
+      @include pad {
+        margin-left: 40px;
+      }
+      @include desktop {
+        margin-left: 64px;
+      }
+    }
+  }
+  a {
+    padding: 0.5em 0;
+    &:hover {
+      color: darken($white, 20%);
+    }
+  }
+}
+
+.landing-page {
+  background-repeat: no-repeat;
+  @include backgroundImage("../../images/banner_pad.png", #{center}, cover);
+
+  @include desktop {
+    background-image: url("../../images/banner.png");
+  }
+  .container {
+    min-height: 394px;
+    @include pad {
+      min-height: 840px;
+    }
+  }
+  .txt {
+    text-align: right;
+  }
+  h2,
+  p {
+    @include line-height(1.5);
+  }
+  .s-text {
+    font-size: 1rem;
+    @include pad {
+      font-size: 2.25rem;
+    }
+  }
+  p {
+    font-size: 2rem;
+    @include pad {
+      font-size: 4rem;
+    }
+  }
+}
+
+.feature {
+  padding: 32px 0 48px;
+  @include pad {
+    padding: 40px 0 48px;
+  }
+  @include desktop {
+    padding: 64px 0 80px;
+  }
+  background-color: $third;
+  .order-md-first {
+    order: 1;
+    @include desktop {
+      order: unset;
+    }
+  }
+  .order-md-sec {
+    order: 2;
+    @include desktop {
+      order: unset;
+    }
+  }
+  .order-md-third {
+    order: 3;
+    @include desktop {
+      order: unset;
+    }
+  }
+  .order-md-forth {
+    order: 4;
+    @include desktop {
+      order: unset;
+    }
+  }
+  .cards {
+    @include line-height(1.5);
+    li {
+      padding: 20px 0 8px;
+      width: 100%;
+      @include pad {
+        width: 50%;
+      }
+      @include desktop {
+        padding: 16px 0 24px;
+        width: 25%;
+      }
+    }
+    .imgWrap {
+      margin-bottom: 16px;
+      width: 80px;
+      height: 80px;
+      @include pad {
+        width: 100px;
+        height: 100px;
+      }
+      @include desktop {
+        margin-bottom: 40px;
+      }
+    }
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1.25em;
+      @include desktop {
+        font-size: 1.5em;
+      }
+    }
+    p {
+      max-width: 224px;
+      @include desktop {
+        max-width: 208px;
+      }
+    }
+  }
+}
+
+.series {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  @include pad {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    padding-top: 64px;
+    padding-bottom: 80px;
+  }
+  .l-title {
+    margin-bottom: 16px;
+    @include pad {
+      margin-bottom: 32px;
+    }
+    @include desktop {
+      margin-bottom: 60px;
+    }
+  }
+
+  ul {
+    width: 100%;
+    li {
+      & + li {
+        margin-top: 8px;
+        @include desktop {
+          margin-top: 32px;
+        }
+      }
+    }
+    h3 {
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1.5em;
+      font-style: italic;
+      padding-left: 8px;
+      @include desktop {
+        font-size: 48px;
+      }
+    }
+  }
+  .series__reverse {
+    @include desktop {
+      flex-direction: row-reverse;
+    }
+  }
+  .series__img {
+    width: 100%;
+    @include pad {
+      width: 61%;
+    }
+    @include desktop {
+      width: 66%;
+    }
+  }
+  .seriesTxtWrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: $white;
+    @include pad {
+      color: $primary;
+      position: relative;
+      width: 39%;
+    }
+    @include desktop {
+      width: 34%;
+    }
+    img {
+      top: 3px;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      filter: brightness(200%);
+      -webkit-filter: brightness(200%);
+      @include pad {
+        filter: brightness(100%);
+        -webkit-filter: brightness(100%);
+      }
+      @include desktop {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+}
+
+.design {
+  @include backgroundImage("../../images/bg.png", center, cover);
+  background-repeat: no-repeat;
+  background-position-y: -1690px;
+  padding-top: 24px;
+  @include pad {
+    padding-top: 40px;
+    background-position-y: -600px;
+  }
+  @include desktop {
+    background-position-y: -300px;
+    padding-top: 64px;
+  }
+  .design__imgWrap {
+    width: 87.2%;
+    @include pad {
+      width: 87.5%;
+    }
+    @include desktop {
+      width: 80%;
+    }
+  }
+}
+.design__imgWrap {
+  width: 80%;
+  margin: auto;
+  margin-top: 16px;
+  margin-bottom: 20px;
+  @include pad {
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .more {
+    position: relative;
+    z-index: 10;
+    left: 40%;
+    top: 0;
+    bottom: 0;
+    // transform: ;
+    height: 100%;
+    font-weight: bold;
+    font-size: 26px;
+    width: 60%;
+    color: $primary;
+    @include pad {
+      left: 50%;
+      width: 50%;
+      font-size: 40px;
+    }
+    @include desktop {
+      width: 50%;
+      font-size: 72px;
+    }
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+    }
+    &:after {
+      left: 10%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 90%;
+      height: 80%;
+      background-color: $white;
+    }
+    &:before {
+      left: 0;
+      top: 0;
+      width: 80%;
+      height: 100%;
+      background-color: #f4c501;
+    }
+  }
+}
+.crossover {
+  .imgWrap {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    & + .imgWrap {
+      margin-top: 20px;
+    }
+    &:before {
+      @include pseudo-el;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+      opacity: 0.5;
+      z-index: 5;
+    }
+    @include pad {
+      width: 48.75%;
+      & + .imgWrap {
+        margin-top: 0;
+      }
+    }
+  }
+  h3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 1em;
+    margin: auto;
+    z-index: 10;
+    font-size: 32px;
+    @include desktop {
+      font-size: 72px;
+    }
+  }
+}
+.recommend {
+  padding-bottom: 8px;
+  @include pad {
+    padding-bottom: 24px;
+  }
+  @include desktop {
+    padding-bottom: 56px;
+  }
+  h2 {
+    margin-top: 24px;
+    @include pad {
+      margin-top: 40px;
+    }
+    @include desktop {
+      margin-top: 144px;
+    }
+  }
+  .card {
+    width: 100%;
+    @include pad {
+      width: 48.75%;
+    }
+    @include desktop {
+      width: 23.5%;
+    }
+    .card__content {
+      padding: 1rem 16px 0;
+    }
+  }
+}
+
+.contact {
+  line-height: 1.5em;
+  padding-top: 24px;
+  padding-bottom: 48px;
+  @include pad {
+    padding-top: 40px;
+    padding-bottom: 56px;
+  }
+  @include desktop {
+    padding-bottom: 56px;
+    padding-top: 64px;
+  }
+  .l-title {
+    margin-bottom: 8px;
+    @include pad {
+      margin-bottom: 16px;
+    }
+    @include desktop {
+      margin-bottom: 24px;
+    }
+  }
+  .container-contact {
+    max-width: 327px;
+    @include pad {
+      max-width: 498px;
+    }
+    @include desktop {
+      max-width: 792px;
+    }
+  }
+  p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    @include pad {
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+  }
+  .form-group,
+  input,
+  textarea {
+    width: 100%;
+  }
+  .form-group {
+    margin-bottom: 12px;
+    @include pad {
+      margin-bottom: 16px;
+    }
+    h3 {
+      margin-bottom: 2px;
+      @include pad {
+        margin-bottom: 4px;
+      }
+    }
+    input,
+    textarea {
+      border: 1px solid $black;
+      font-size: 16px;
+      padding: 7px 12px;
+      @include pad {
+        padding: 14px 16px;
+      }
+    }
+    .checkboxWrap h3 {
+      cursor: pointer;
+    }
+    .checkbox {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $black;
+      border-radius: 3px;
+      z-index: 11;
+    }
+  }
+}
+.input-check {
+  display: none;
+  &:checked {
+    & + .checkbox:before,
+    & + .checkbox:after {
+      content: "";
+      position: absolute;
+      border-bottom: 3px solid $white;
+      width: 100%;
+      height: 100%;
+    }
+    & + .checkbox:before {
+      width: 50%;
+      right: 2px;
+      bottom: 1px;
+      transform: rotate(35deg);
+    }
+    & + .checkbox:after {
+      left: -3px;
+      bottom: 2px;
+      transform: rotate(-55deg);
+    }
+    & + .checkbox {
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+}
+.submitWrap {
+  margin-top: 8px;
+  @include desktop {
+    margin-top: 92px;
+  }
+}
+.submit {
+  cursor: pointer;
+  margin-top: 26px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 180px;
+  @include line-height(1.5);
+  &:before {
+    content: "確認送出";
+    background-color: $primary;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 56px;
+    transition: 0.3s;
+  }
+  &:hover {
+    background-color: $secondary;
+    &:before {
+      width: 120%;
+      transition: 0.3s;
+    }
+  }
+}
+
+.footer {
+  padding-top: 24px;
+  padding-bottom: 20px;
+  @include pad {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    padding-top: 48px;
+    padding-bottom: 27px;
+  }
+}
+.footer__siteLink {
+  display: none;
+  @include pad {
+    margin-bottom: 26px;
+    display: flex;
+  }
+  @include desktop {
+    margin-bottom: 38px;
+  }
+  li + li {
+    margin-left: 40px;
+    @include desktop {
+      margin-left: 48px;
+    }
+  }
+}
+.footer__socialLink {
+  margin-left: auto;
+  li + li {
+    margin-left: 24px;
+    @include desktop {
+      margin-left: 32px;
+    }
+  }
+  img {
+    max-width: 24px;
+    @include desktop {
+      max-width: 48px;
+    }
+  }
+}
+.footer__contact {
+  margin-bottom: 24px;
+  order: -1;
+  width: 55%;
+  @include pad {
+    order: unset;
+    width: 100%;
+  }
+  li + li {
+    margin-top: 8px;
+    @include desktop {
+      margin-top: 12px;
+    }
+  }
+  p {
+    margin-left: 8px;
+    @include pad {
+      margin-left: 12px;
+    }
+  }
+  img {
+    max-width: 13px;
+    @include pad {
+      max-width: 23px;
+    }
+    @include desktop {
+      max-width: 36px;
+    }
+  }
+}
+.footer__right {
+  padding-top: 16px;
+  font-size: 14px;
+  width: 100%;
+  border-top: 1px solid #fff;
+  @include pad {
+    padding-top: 24px;
+  }
+  .footer__right__logo {
+    max-width: 46px;
+    order: 5;
+    @include pad {
+      display: none;
+      order: 3;
+    }
+    @include desktop {
+      display: block;
+      min-width: 80px;
+      order: 1;
+      margin-right: 38px;
+    }
+  }
+}
+.footer__right__txt {
+  width: 100%;
+  margin-bottom: 8px;
+  order: 2;
+  @include pad {
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+.footer__right__link {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  order: 4;
+  @include pad {
+    margin-left: auto;
+    flex-direction: row;
+  }
+  p + p {
+    margin-top: 8px;
+    @include pad {
+      margin-left: 24px;
+      margin-top: 0;
+    }
+    @include desktop {
+      margin-left: 62px;
+    }
+  }
+}
+
+// qa頁
+.sectionTitle {
+  background-image: url(../../images/qa.png);
+  background-position: 25% 50%;
+  background-size: cover;
+  height: 143px;
+  @include pad {
+    height: 304px;
+  }
+  .container {
+    height: 100%;
+  }
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.5em;
+    @include pad {
+      font-size: 3rem;
+    }
+    @include desktop {
+      font-size: 4rem;
+    }
+  }
+}
+.content-head {
+  margin-top: 28px;
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+  @include pad {
+    margin-top: 40px;
+    margin-bottom: 32px;
+    font-size: 1.75rem;
+  }
+  @include desktop {
+    margin-top: 88px;
+    margin-bottom: 16px;
+    font-size: 2rem;
+  }
+}
+.tab {
+  margin-bottom: 56px;
+  @include pad {
+    margin-bottom: 104px;
+  }
+  @include desktop {
+    margin-bottom: 156px;
+  }
+  .tab-head,
+  .tab-body {
+    border: 1px solid $black;
+    line-height: 1.5em;
+    padding: 16px;
+    margin-bottom: -1px;
+    @include pad {
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+    @include desktop {
+      padding: 22px 38px;
+    }
+  }
+  .tab-head {
+    display: flex;
+    font-weight: 700;
+    cursor: pointer;
+    i {
+      margin-left: auto;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      position: relative;
+      top: 5px;
+      transition: 0.3s;
+    }
+  }
+  .active {
+    i {
+      transform: rotate(180deg) translateY(30%);
+      transition: 0.3s;
+    }
+  }
+  .tab-body {
+    background-color: $lighter-gray;
+  }
+}

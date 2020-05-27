@@ -1,65 +1,65 @@
-*{
+* {
   box-sizing: border-box;
   position: relative;
 }
-body{
-  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+body {
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
   font-weight: regular;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 //section 設定
-.sectionSet{
+.sectionSet {
   width: 100%;
 }
-.container{
+.container {
   max-width: 1200px;
-  width: 100%;
-  padding: 40px 0;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;  
-  @include medium{
-    padding: 40px 15px;
-  }
 }
 
 //helper css
-.pseudo-point::before{
+.pseudo-point::before {
   @include pseudo-el-style(22px, 22px, $secondary);
   left: -16px;
   top: 50%;
-  transform: translate(-100%,-50%);
-  border-radius: 50px
+  transform: translate(-100%, -50%);
+  border-radius: 50px;
 }
 
-
-
-.header{
+.header {
   max-height: 960px;
   height: 120vh;
-  @include backgroundImage('../../images/banner.png',center,cover);
-  .container{
+  @include backgroundImage("../../images/banner.png", center, cover);
+  .container {
+    padding: 40px 0;
     height: 100vh;
+    @include medium {
+      padding: 40px 15px;
+    }
   }
-  .txtWrap{
+  .txtWrap {
     max-width: 283px;
   }
-  h1{
+  h1 {
     font-size: 5em;
     font-size: 5rem;
     line-height: 5.875em;
     line-height: 5.875rem;
   }
-  h3{
+  h3 {
     @include line-height(1.75);
-    
   }
-  ul{
+  ul {
     justify-content: space-between;
   }
 }
 
-.title-text{
+.title-text {
   margin: 24px 0;
   font-size: 3.5555em;
   font-size: 3.5555rem;
@@ -68,25 +68,31 @@ body{
   font-weight: 500;
 }
 
-.about{
-  .txtWrap{
+.about {
+  .container {
+    padding: 40px 0;
+    @include medium {
+      padding: 40px 15px;
+    }
+  }
+  .txtWrap {
     max-width: 411px;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
   }
-  img{
-    max-width: 384px;
+  img {
+    // max-width: 384px;
     height: auto;
   }
-  ul{
+  ul {
     @include line-height(1.5);
   }
 }
-.profile{
+.profile {
   margin-bottom: 3.125rem;
-  &:before{
-    @include pseudo-el-style(1px,100%,$black);
+  &:before {
+    @include pseudo-el-style(1px, 100%, $black);
     max-width: 384px;
     bottom: -1.5625em;
     left: 0;
@@ -95,46 +101,70 @@ body{
     transform: translateY(-50%);
   }
 }
-.profile li{
-  margin-top: 0.5em;
+.profile li {
+  margin-top: 0.3333em;
+  line-height: 1.75em;
 }
-.experience li{
-  margin: 1em auto;
+.experience li {
+  margin: 0.75em auto;
   display: inline-block;
   margin-left: 38px;
 }
 
-.brand{
-  .container{
+.brand {
+  .container {
+    padding-top: 40px;
     padding-bottom: 140px;
+    @include medium {
+      padding: 40px 15px;
+    }
   }
-  h2{
+  h2 {
     margin-bottom: 1rem;
   }
-  h3{
+  h3 {
     @include line-height(2.1);
+  }
+  .imgWrap {
+    max-width: 100%;
   }
 }
 
-.works{
-  @include backgroundImage('../../images/photo-1.png', center, cover);
-  h3{
+.works {
+  @include backgroundImage("../../images/photo-1.png", bottom, contain);
+  background-repeat: no-repeat;
+  h3 {
     @include line-height(2.1);
   }
-  .imgWrap{
+  .container {
+    padding-top: 40px;
+    padding-bottom: 104px;
+    @include medium {
+      padding: 40px 15px;
+    }
+  }
+  .imgWrap {
     width: 100%;
     margin-bottom: 38px;
-    p{
+    p {
       margin: 18px 0;
+    }
+    img {
+      width: 100%;
     }
   }
 }
 
-.footer{
-  .container{
+.footer {
+  .container {
+    padding-top: 40px;
     padding-bottom: 64px;
+    @include medium {
+      padding: 40px 15px;
+    }
   }
-  .title-text,p{
+  .title-text,
+  p {
     margin-bottom: 16px;
   }
 }
