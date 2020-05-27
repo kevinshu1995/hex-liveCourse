@@ -1,0 +1,93 @@
+extend ./modules/layout.pug
+
+block append head
+    title Week05 - Bootstrap | admin
+    link(rel="stylesheet", href="assets/style/all.css")
+    script(src="assets/js/vendors.js")
+    script(src="assets/js/all.js")
+
+block content
+    include ./modules/nav
+    main.main
+        ul.nav.pageHead
+            li.nav-item.pageHead__title Admin
+            li.nav-item.pageHead__function.mr-auto
+                a.nav-link(href="#")
+                    span.material-icons.align-top add 
+                    | Add New Admin
+            li.nav-item
+                a.nav-link(href='#')
+                    span.material-icons search
+            li.nav-item
+                a.nav-link(href='#')
+                    span.material-icons notifications_active
+        section.pageSection.container-fluid
+            .row
+                .adminTable.col-12.table-responsive
+                    table.table
+                        thead
+                            tr
+                                th(scope='col') 
+                                    | ID
+                                    span.material-icons arrow_downward
+                                th(scope='col') Name
+                                th(scope='col') Email
+                                th(scope='col') Verified
+                                th(scope='col') 
+                        tbody
+                            tr
+                                th(scope='row') #1
+                                td Emir Wicks
+                                td emir.wicks@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr
+                                th(scope='row') #2
+                                td Zaina Goldsmith
+                                td zaina.goldsmith@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr
+                                th(scope='row') #3
+                                td Emir Wicks
+                                td emir.wicks@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr
+                                th(scope='row') #4
+                                td Zaina Goldsmith
+                                td zaina.goldsmith@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr
+                                th(scope='row') #5
+                                td Emir Wicks
+                                td emir.wicks@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr
+                                th(scope='row') #6
+                                td Zaina Goldsmith
+                                td zaina.goldsmith@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr
+                                th(scope='row') #7
+                                td Zaina Goldsmith
+                                td zaina.goldsmith@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
