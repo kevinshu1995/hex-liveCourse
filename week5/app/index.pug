@@ -11,14 +11,14 @@ block append head
     //- icons https://material.io/resources/icons/?style=baseline 
 
 block content
-    nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top.h-100.flex-column.justify-content-start.align-items-start.pl-0(style="width:150px;")
-        a.navbar-brand.nav-pl(href='#') Navbar
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top.h-100.flex-column.justify-content-start.align-items-start.pl-0
+        a.navbar-brand.pl-4(href='#') Navbar
         .navbar-nav.flex-column
-            a.nav-item.nav-link.nav-pl.active(href='#') Home 
-            a.nav-item.nav-link.nav-pl(href='#') Features
-            a.nav-item.nav-link.nav-pl(href='#') Pricing
+            a.nav-item.nav-link.pl-4.active(href='#') Home 
+            a.nav-item.nav-link.pl-4(href='#') Features
+            a.nav-item.nav-link.pl-4(href='#') Pricing
         .navbar-nav.flex-column.mt-auto
-            a.nav-item.nav-link.nav-pl(href='#') Pricing
+            a.nav-item.nav-link.pl-4(href='#') Pricing
 
 block footer
     include ./modules/footer
