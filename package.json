@@ -1,0 +1,26 @@
+{
+  "name": "hex-livecourse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d week1 -d week2",
+    "deployDist": "gh-pages -d dist",
+    "deployPublic": "gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinshu1995/hex-liveCourse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinshu1995/hex-liveCourse/issues"
+  },
+  "homepage": "https://kevinshu1995.github.io/hex-liveCourse"
+}
