@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: regular;
+}
+.wrap {
+  max-width: 1230px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.mark {
+  color: $color-pri;
+}
+.pseudo-point::before {
+  @include pseudo-el-style(16px, 16px, $color-sec);
+  left: -31px;
+  top: 12px;
+  border-radius: 50px;
+}
+//各段落的標題
+.content__header {
+  line-height: 45px;
+  &:before {
+    @include pseudo-el-style(1px, 100%, #000);
+    bottom: 0;
+    left: 0;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    padding-left: 8px;
+    padding-bottom: 8px;
+  }
+  .mark {
+    font-size: 24px;
+    vertical-align: top;
+    padding-left: 16px;
+  }
+}
+
+//主要內容設定
+.main {
+  margin-top: 48px;
+  .header {
+    font-size: 80px;
+    line-height: 90px;
+    h1 {
+      padding-bottom: 24px;
+      &::before {
+        @include pseudo-el-style(2px, 100%, #000);
+        bottom: 0;
+        left: 0;
+      }
+    }
+    img {
+      margin: 48px 0;
+      border-radius: 50%;
+      max-width: 324px;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .content {
+    margin-bottom: 72px;
+  }
+  .content__body {
+    line-height: 36px;
+    font-size: 24px;
+    padding-left: 48px;
+    margin-top: 16px;
+    h3,
+    p + p {
+      margin-bottom: 24px;
+    }
+  }
+}
+.footer {
+  padding: 16px 0;
+  background-color: $color-thr;
+  color: #fff;
+  text-align: center;
+  .content__header {
+    padding: 8px 0;
+    &:before {
+      @include pseudo-el-style(1px, 100%, #fff);
+    }
+  }
+  .mark {
+    color: #fff;
+  }
+  .txt {
+    padding: 32px 0;
+    font-size: 24px;
+    line-height: 36px;
+    li + li {
+      margin-top: 16px;
+    }
+  }
+  .footerLink {
+    line-height: 0;
+    a {
+      cursor: pointer;
+      display: inline-block;
+      margin: 0 12px;
+      img {
+        font-size: 0;
+        display: block;
+      }
+    }
+  }
+}
+
+//用於淺色滿版背景的class
+.l-bg-w100 {
+  &:before {
+    @include pseudo-el-style(72%, 100%, $color-sec);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+//用於內容區塊居中的class
+.main .content--center {
+  background-color: $color-thr;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 24px 102px 16px;
+  .mark {
+    color: #fff;
+  }
+  .content__header {
+    width: 100%;
+    text-align: center;
+    &:before {
+      @include pseudo-el-style(1.5px, 100%, #fff);
+      bottom: -1px;
+    }
+    h2 {
+      display: inline;
+      padding-left: 0;
+    }
+  }
+  .content__body {
+    border-left: 1px solid #fff;
+    padding-left: 24px;
+    margin: 40px 0;
+    display: inline-block;
+    li + li {
+      padding-top: 16px;
+    }
+  }
+}
+//用於內容有清單標示的class
+.main .content__listLine {
+  li + li {
+    margin-top: 32px;
+    &:after {
+      @include pseudo-el-style(66px, 1px, $color-sec);
+      left: -24px;
+      top: -48px;
+    }
+  }
+}
+//用於內容左側有線的class
+.main .content__timeLine {
+  max-width: 680px;
+  &:after {
+    @include pseudo-el-style(100%, 1px, $color-sec);
+    left: 22px;
+    top: 0;
+  }
+  li + li {
+    margin-top: 32px;
+  }
+  h3 {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  img {
+    max-height: 90px;
+    width: auto;
+    display: block;
+    margin-bottom: 8px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+[data-aos] {
+  visibility: hidden;
+}
+[data-aos].animate__animated{
+  visibility: visible;
+}

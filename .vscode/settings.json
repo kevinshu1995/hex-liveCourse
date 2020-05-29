@@ -1,0 +1,16 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../../public/css" //此為輸出的路徑，可以自行更改
+      // "savePath": "./public/css" //此為輸出的路徑，可以自行更改
+    },
+    {
+      "extensionName": ".min.css", //正式版副檔名為min.css
+      "format": "compressed", //壓縮成一行css，正式版本
+      "savePath": "~/../../public/dist/style"
+      // "savePath": "./public/dist/style"
+    }
+  ],
+}

@@ -1,0 +1,30 @@
+block nav
+    nav.navbar.navbar-light.bg-light.fixed-top.h-100.flex-column.justify-content-start.align-items-start
+        a.navbar-brand.nav-pl(href='#')
+            img(src="assets/images/logo-ANSWER.svg", alt="logo") 
+        .navbar-nav.flex-column.w-100#sideBar
+            a.nav-item.nav-link.nav-pl(href='#') 
+                span.material-icons.pr-3 assessment
+                span.nav-item__txt Dashboard
+            a.nav-item.nav-link.nav-pl(href='#') 
+                span.material-icons.pr-3 question_answer
+                span.nav-item__txt Question
+            a.nav-item.nav-link.nav-pl#sideBar-assignment(href='index.html') 
+                span.material-icons.pr-3 assignment
+                span.nav-item__txt Assignment
+            a.nav-item.nav-link.nav-pl(href='#') 
+                span.material-icons.pr-3 video_library
+                span.nav-item__txt Course
+            a.nav-item.nav-link.nav-pl#sideBar-admin(href='admin.html')
+                span.material-icons.pr-3 group
+                span.nav-item__txt Admin
+            a.nav-item.nav-link.nav-pl(href='#') 
+                span.material-icons.pr-3 settings
+                span.nav-item__txt Settings
+        .navbar-nav.flex-column.mt-auto.w-100
+            a.nav-item.nav-link.userBlock.d-flex(href='#')
+                .avatar
+                    img.img-fluid(src="assets/images/andychen.jpeg", alt="")
+                .account.pl-3
+                    h2.mb-0 Andy Chen
+                    p.mb-0 andy0401@mail.com

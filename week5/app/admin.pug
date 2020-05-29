@@ -1,0 +1,241 @@
+extend ./modules/layout.pug
+
+block append head
+    title Week05 - Bootstrap | admin
+    link(rel="stylesheet", href="assets/style/all.css")
+    script(src="assets/js/vendors.js")
+    script(src="assets/js/all.js")
+
+block content
+    include ./modules/nav
+    main.main
+        ul.nav.pageHead
+            li.nav-item.pageHead__title Admin
+            li.nav-item.pageHead__function.mr-auto
+                a.nav-link(href="#"  data-toggle="modal" data-target="#addModal")
+                    span.material-icons.align-top add 
+                    | Add New Admin
+            li.nav-item
+                a.nav-link(href='#')
+                    span.material-icons search
+            li.nav-item
+                a.nav-link(href='#')
+                    span.material-icons notifications_active
+        section.pageSection.container-fluid
+            .row
+                .adminTable.col-12.table-responsive
+                    table.table.table-hover
+                        thead
+                            tr
+                                th(scope='col') 
+                                    | ID
+                                    span.material-icons.align-bottom arrow_downward
+                                th(scope='col') Name
+                                th(scope='col') Email
+                                th(scope='col') Verified
+                                th(scope='col') 
+                        tbody
+                            tr(data-toggle="modal" data-target="#personModal" role="button")
+                                th(scope='row') #1
+                                td Emir Wicks
+                                td emir.wicks@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr(role="button")
+                                th(scope='row') #2
+                                td Zaina Goldsmith
+                                td zaina.goldsmith@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr(role="button")
+                                th(scope='row') #3
+                                td Emir Wicks
+                                td emir.wicks@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr(role="button")
+                                th(scope='row') #4
+                                td Zaina Goldsmith
+                                td zaina.goldsmith@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr(role="button")
+                                th(scope='row') #5
+                                td Emir Wicks
+                                td emir.wicks@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr(role="button")
+                                th(scope='row') #6
+                                td Zaina Goldsmith
+                                td zaina.goldsmith@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                            tr(role="button")
+                                th(scope='row') #7
+                                td Zaina Goldsmith
+                                td zaina.goldsmith@mail.com
+                                td Yes
+                                td 
+                                    span.material-icons visibility
+                                    span.material-icons edit
+                .col-12.paginationWrap
+                    nav(aria-label='Page navigation example')
+                        ul.pagination.justify-content-end
+                            li.page-item
+                                a.page-link.pageArrow(href='#', aria-label='Previous')
+                                    span.material-icons navigate_before
+                            li.page-item.active
+                                a.page-link(href='#') 1
+                            li.page-item
+                                a.page-link(href='#') 2
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link.pageArrow(href='#', aria-label='Next')
+                                    span.material-icons navigate_next
+        #personModal.modal.fade.personModal(tabindex='-1', role='dialog', aria-hidden='true' data-backdrop="static" )
+            .modal-dialog
+                .modal-content
+                    .modal-header.d-flex.justify-content-start.flex-wrap
+                        .userImg
+                            img.img-fluid(src="assets/images/emir.jpeg", alt="")
+                        .userDetail.ml-4.d-flex.justify-content-between.flex-grow-1.js-marginslide
+                            p.mb-1 #1
+                            .userName.flex-grow-1
+                                p Admin
+                                h3.font-weight-bold Emir Wicks
+                            p.userDetail__email.text-note.flex-grow-1 emir.wicks@mail.com
+                            p.userDetail__status.d-flex.justify-content-between
+                                a.badge.badge-unselect(href="#") Verified
+                                a#js-modalToggle.arrowWrap(href="#")
+                                    span.material-icons.js-rotate keyboard_arrow_down
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                        .modalBtns.w-100.text-right#js-modalToggle-target
+                            button.btn.btn-outline-danger.modalClose(type='button') Deactivate
+                            button.btn.btn-primary#editModalTrigger(type='button') Edit
+        #editModal.modal.fade.editModal(tabindex='-1', role='dialog', aria-hidden='true' data-backdrop="static")
+            .modal-dialog.modal-dialog-scrollable
+                .modal-content
+                    .modal-header
+                        .modal-title.w-100.d-flex.flex-wrap
+                            h3 Edit Admin
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .modal-body.d-flex.justify-content-start.flex-wrap.pt-0
+                        h4.mb-3 Account
+                        .form-group
+                            label(for='editName') Name
+                            input#editName.form-control(type='txt', value="Emir Wicks")
+                        .form-group
+                            label(for='editEmail') Email
+                            input#editEmail.form-control(type='email', value="Emir.Wicks@mail.com")
+                            //- small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+                        h4.mb-3 Verification
+                        .form-group.d-flex.justify-content-between
+                            .custom-control.custom-checkbox
+                                input#editVerification.custom-control-input(type='checkbox')
+                                label.custom-control-label.font-weight-bold(for='editVerification') Verified
+                            span.text-right 2020/4/12
+                        button.btn.btn-outline-green-bg-darken.w-100.mb-3(disabled) Send Verification Mail
+                        h4.mb-3 Access Level
+                        .form-group
+                            select.custom-select
+                                option(disabled) Select
+                                option(selected='' value="Admin") Admin
+                                option(value='1') 你
+                                option(value='2') 在
+                                option(value='3') 看
+                                option(value='4') 我
+                                option(value='5') 嗎
+                                option(value='6') ?
+                        .form-group.multi-inputs
+                            .custom-control.custom-checkbox
+                                input#lecture.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='lecture') Lecture
+                            .custom-control.custom-checkbox
+                                input#Coupon.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='Coupon') Coupon
+                            .custom-control.custom-checkbox
+                                input#Message.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='Message') Message
+                            .custom-control.custom-checkbox
+                                input#Setting.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='Setting') Setting
+                            .custom-control.custom-checkbox
+                                input#taskMenu.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='taskMenu') task menu
+                        h4.mb-3 Deactivate Account
+                        .text-danger.mb-2.custom-alert
+                            span.material-icons.align-middle.mr-1 warning
+                            span This cannot be undone!
+                        button.btn.btn-outline-danger.w-100 Deactivate This Account
+                        .modalBtns.w-100.text-right#js-modalToggle-target.mt-5
+                                button.btn.btn-outline-danger(type='button' data-dismiss="modal") Cancel
+                                button.btn.btn-primary(type='button') Update
+        #addModal.modal.fade.addModal(tabindex='-1', role='dialog', aria-hidden='true' data-backdrop="static" )
+            .modal-dialog.modal-dialog-scrollable
+                .modal-content
+                    .modal-header
+                        .modal-title.w-100.d-flex.flex-wrap
+                            h3 New Admin
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .modal-body.d-flex.justify-content-start.flex-wrap.pt-0
+                        h4.mb-3 Account
+                        .form-group
+                            label(for='addName') Name
+                            input#editName.form-control(type='txt', value="")
+                        .form-group
+                            label(for='addEmail') Email
+                            input#editEmail.form-control(type='email', value="")
+                            //- small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+                        h4.mb-3 Verification
+                        .form-group.verificationWrap
+                            span.material-icons.align-middle.mr-1.text-danger.font-weight-bold warning
+                            span Verified
+                        button.btn.btn-outline-primary.w-100.mb-3 Send Verification Mail
+                        h4.mb-3 Access Level
+                        .form-group
+                            select.custom-select
+                                option(selected='' disabled) -Choose access level-
+                                option(value="Admin") Admin
+                                option(value='1') 你
+                                option(value='2') 在
+                                option(value='3') 看
+                                option(value='4') 我
+                                option(value='5') 嗎
+                                option(value='6') ?
+                        .form-group.multi-inputs
+                            .custom-control.custom-checkbox
+                                input#lecture.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='lecture') Lecture
+                            .custom-control.custom-checkbox
+                                input#Coupon.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='Coupon') Coupon
+                            .custom-control.custom-checkbox
+                                input#Message.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='Message') Message
+                            .custom-control.custom-checkbox
+                                input#Setting.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='Setting') Setting
+                            .custom-control.custom-checkbox
+                                input#taskMenu.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='taskMenu') task menu
+                        .modalBtns.w-100.text-right#js-modalToggle-target.mt-5
+                                button.btn.btn-outline-danger(type='button' data-dismiss="modal") Cancel
+                                button.btn.btn-primary(type='button') Update
+

@@ -1,0 +1,10 @@
+@mixin pseudo-el{
+  content: '';
+  position: absolute;
+}
+@mixin pseudo-el-style ($height, $width, $color){
+  @include pseudo-el;
+  height: $height;
+  width: $width;
+  background-color: $color;
+}
