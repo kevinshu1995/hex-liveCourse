@@ -1,5 +1,24 @@
 $(function(){
     addNavActive()
+    $('#js-modalToggle-target').hide();
+    $('#js-modalToggle').on('click',function(e){
+        console.log('123')
+        e.preventDefault();
+        $('#js-modalToggle-target').stop().slideToggle()
+        $('.js-marginslide').toggleClass('modalToggle-target');
+        $('.js-rotate').toggleClass('ani-rotate180')
+    })
+    $('.modalClose').on('click',function(){
+        $('#personModal').modal('hide')
+    })
+    $('#editModalTrigger').on('click',function(){
+        $('#personModal').modal('toggle')
+        $('#editModal').modal('toggle')
+    })
+    $("#editModal").on("shown.bs.modal",function(e){
+        $('body').addClass('modal-open')
+        console.log('轉場特效結束，已完全呈現時呼叫');
+      });
 })
 
 function addNavActive(){

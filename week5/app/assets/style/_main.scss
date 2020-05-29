@@ -210,3 +210,127 @@ $navbar-width: 300px;
         }
     }
 }
+
+// Admin Page ====
+.table th, .table td{
+    vertical-align: middle;
+}
+.table {
+    thead th{
+        border-top-color: transparent;
+        border-bottom-color: $black;
+    }
+    td{
+        .material-icons {
+            cursor: pointer;
+            &+ .material-icons{
+                margin-left: 1.25rem;
+            }
+        }
+    }
+}
+.paginationWrap{
+    margin-top: 63px;
+}
+.pagination{
+    .material-icons{
+        vertical-align: bottom;
+        font-size: 1.25rem;
+    }
+    .pageArrow{
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+    }
+}
+
+// modal ====
+// personModal
+.userImg{
+    width: 141px;
+    height: 141px;
+    overflow: hidden;
+    .img-fluid{
+        max-width: unset;
+    }
+    img{
+        height: 100%;
+        text-align: center;
+    }
+}
+.userDetail{
+    flex-direction: column;
+    height: 141px;
+    margin-bottom: 0;
+    transition: .5s;
+    .material-icons{
+        transition: .3s;
+    }
+    p,h3,a{
+        margin-bottom: 0;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    .userDetail__email,
+    .userDetail__status .badge{
+        font-size: 0.875rem;
+    }
+    .arrowWrap{
+        line-height: 0;
+    }
+}
+.modal{
+    .close{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0;
+    }
+}
+
+// for animate
+.modalToggle-target{
+    margin-bottom: 1.5rem;
+    transition: .5s;
+}
+.ani-rotate180{
+    transform: rotate(180deg);
+    transition: .3s;
+}
+
+// editmodal
+.editModal,
+.addModal{
+    .modal-header{
+        padding-bottom: 2rem;
+    }
+    h3,h4{
+        width: 100%;
+    }
+    .form-group {
+        width: 100%;
+        & ~ h4{
+            margin-top: 0.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid $green-bg-darken;  
+        }
+    }
+    .multi-inputs{
+        .custom-control{
+            margin-bottom: 1rem;
+        }
+        .custom-checkbox .custom-control-label::before{
+            border-radius: 5px;
+        }
+    }
+    .custom-alert{
+        .material-icons{
+            font-size: 1rem;
+        }
+    }
+}
+.addModal{
+    .verificationWrap .material-icons{
+        font-size: 1rem;
+    }
+}
