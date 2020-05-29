@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap"/>
+    <title>Week05 - Bootstrap | admin</title>
+    <link rel="stylesheet" href="assets/style/all.css"/>
+    <script src="assets/js/vendors.js"></script>
+    <script src="assets/js/all.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light fixed-top h-100 flex-column justify-content-start align-items-start"><a class="navbar-brand nav-pl" href="#"><img src="assets/images/logo-ANSWER.svg" alt="logo"/></a>
+      <div class="navbar-nav flex-column w-100" id="sideBar"><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">assessment</span><span class="nav-item__txt">Dashboard</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">question_answer</span><span class="nav-item__txt">Question</span></a><a class="nav-item nav-link nav-pl" id="sideBar-assignment" href="index.html"> <span class="material-icons pr-3">assignment</span><span class="nav-item__txt">Assignment</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">video_library</span><span class="nav-item__txt">Course</span></a><a class="nav-item nav-link nav-pl" id="sideBar-admin" href="admin.html"><span class="material-icons pr-3">group</span><span class="nav-item__txt">Admin</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">settings</span><span class="nav-item__txt">Settings</span></a></div>
+      <div class="navbar-nav flex-column mt-auto w-100"><a class="nav-item nav-link userBlock d-flex" href="#">
+          <div class="avatar"><img class="img-fluid" src="assets/images/andychen.jpeg" alt=""/></div>
+          <div class="account pl-3">
+            <h2 class="mb-0">Andy Chen</h2>
+            <p class="mb-0">andy0401@mail.com</p>
+          </div></a></div>
+    </nav>
+    <nav class="navbar navbar-light bg-light fixed-top h-100 flex-column justify-content-start align-items-start"><a class="navbar-brand nav-pl" href="#"><img src="assets/images/logo-ANSWER.svg" alt="logo"/></a>
+      <div class="navbar-nav flex-column w-100" id="sideBar"><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">assessment</span><span class="nav-item__txt">Dashboard</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">question_answer</span><span class="nav-item__txt">Question</span></a><a class="nav-item nav-link nav-pl" id="sideBar-assignment" href="index.html"> <span class="material-icons pr-3">assignment</span><span class="nav-item__txt">Assignment</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">video_library</span><span class="nav-item__txt">Course</span></a><a class="nav-item nav-link nav-pl" id="sideBar-admin" href="admin.html"><span class="material-icons pr-3">group</span><span class="nav-item__txt">Admin</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">settings</span><span class="nav-item__txt">Settings</span></a></div>
+      <div class="navbar-nav flex-column mt-auto w-100"><a class="nav-item nav-link userBlock d-flex" href="#">
+          <div class="avatar"><img class="img-fluid" src="assets/images/andychen.jpeg" alt=""/></div>
+          <div class="account pl-3">
+            <h2 class="mb-0">Andy Chen</h2>
+            <p class="mb-0">andy0401@mail.com</p>
+          </div></a></div>
+    </nav>
+    <main class="main">
+      <ul class="nav pageHead">
+        <li class="nav-item pageHead__title">Admin</li>
+        <li class="nav-item pageHead__function mr-auto"><a class="nav-link" href="#" data-toggle="modal" data-target="#addModal"><span class="material-icons align-top">add </span>Add New Admin</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><span class="material-icons">search</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><span class="material-icons">notifications_active</span></a></li>
+      </ul>
+      <section class="pageSection container-fluid">
+        <div class="row">
+          <div class="adminTable col-12 table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">
+                     ID<span class="material-icons align-bottom">arrow_downward</span></th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Verified</th>
+                  <th scope="col"> </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-toggle="modal" data-target="#personModal" role="button">
+                  <th scope="row">#1</th>
+                  <td>Emir Wicks</td>
+                  <td>emir.wicks@mail.com</td>
+                  <td>Yes</td>
+                  <td> <span class="material-icons">visibility</span><span class="material-icons">edit</span></td>
+                </tr>
+                <tr role="button">
+                  <th scope="row">#2</th>
+                  <td>Zaina Goldsmith</td>
+                  <td>zaina.goldsmith@mail.com</td>
+                  <td>Yes</td>
+                  <td> <span class="material-icons">visibility</span><span class="material-icons">edit</span></td>
+                </tr>
+                <tr role="button">
+                  <th scope="row">#3</th>
+                  <td>Emir Wicks</td>
+                  <td>emir.wicks@mail.com</td>
+                  <td>Yes</td>
+                  <td> <span class="material-icons">visibility</span><span class="material-icons">edit</span></td>
+                </tr>
+                <tr role="button">
+                  <th scope="row">#4</th>
+                  <td>Zaina Goldsmith</td>
+                  <td>zaina.goldsmith@mail.com</td>
+                  <td>Yes</td>
+                  <td> <span class="material-icons">visibility</span><span class="material-icons">edit</span></td>
+                </tr>
+                <tr role="button">
+                  <th scope="row">#5</th>
+                  <td>Emir Wicks</td>
+                  <td>emir.wicks@mail.com</td>
+                  <td>Yes</td>
+                  <td> <span class="material-icons">visibility</span><span class="material-icons">edit</span></td>
+                </tr>
+                <tr role="button">
+                  <th scope="row">#6</th>
+                  <td>Zaina Goldsmith</td>
+                  <td>zaina.goldsmith@mail.com</td>
+                  <td>Yes</td>
+                  <td> <span class="material-icons">visibility</span><span class="material-icons">edit</span></td>
+                </tr>
+                <tr role="button">
+                  <th scope="row">#7</th>
+                  <td>Zaina Goldsmith</td>
+                  <td>zaina.goldsmith@mail.com</td>
+                  <td>Yes</td>
+                  <td> <span class="material-icons">visibility</span><span class="material-icons">edit</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-12 paginationWrap">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-end">
+                <li class="page-item"><a class="page-link pageArrow" href="#" aria-label="Previous"><span class="material-icons">navigate_before</span></a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link pageArrow" href="#" aria-label="Next"><span class="material-icons">navigate_next</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <div class="modal fade personModal" id="personModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-start flex-wrap">
+              <div class="userImg"><img class="img-fluid" src="assets/images/emir.jpeg" alt=""/></div>
+              <div class="userDetail ml-4 d-flex justify-content-between flex-grow-1 js-marginslide">
+                <p class="mb-1">#1</p>
+                <div class="userName flex-grow-1">
+                  <p>Admin</p>
+                  <h3 class="font-weight-bold">Emir Wicks</h3>
+                </div>
+                <p class="userDetail__email text-note flex-grow-1">emir.wicks@mail.com</p>
+                <p class="userDetail__status d-flex justify-content-between"><a class="badge badge-unselect" href="#">Verified</a><a class="arrowWrap" id="js-modalToggle" href="#"><span class="material-icons js-rotate">keyboard_arrow_down</span></a></p>
+              </div>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modalBtns w-100 text-right" id="js-modalToggle-target">
+                <button class="btn btn-outline-danger modalClose" type="button">Deactivate</button>
+                <button class="btn btn-primary" id="editModalTrigger" type="button">Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade editModal" id="editModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title w-100 d-flex flex-wrap">
+                <h3>Edit Admin</h3>
+              </div>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body d-flex justify-content-start flex-wrap pt-0">
+              <h4 class="mb-3">Account</h4>
+              <div class="form-group">
+                <label for="editName">Name</label>
+                <input class="form-control" id="editName" type="txt" value="Emir Wicks"/>
+              </div>
+              <div class="form-group">
+                <label for="editEmail">Email</label>
+                <input class="form-control" id="editEmail" type="email" value="Emir.Wicks@mail.com"/>
+              </div>
+              <h4 class="mb-3">Verification</h4>
+              <div class="form-group d-flex justify-content-between">
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="editVerification" type="checkbox"/>
+                  <label class="custom-control-label font-weight-bold" for="editVerification">Verified</label>
+                </div><span class="text-right">2020/4/12</span>
+              </div>
+              <button class="btn btn-outline-green-bg-darken w-100 mb-3" disabled="disabled">Send Verification Mail</button>
+              <h4 class="mb-3">Access Level</h4>
+              <div class="form-group">
+                <select class="custom-select">
+                  <option disabled="disabled">Select</option>
+                  <option selected="" value="Admin">Admin</option>
+                  <option value="1">你</option>
+                  <option value="2">在</option>
+                  <option value="3">看</option>
+                  <option value="4">我</option>
+                  <option value="5">嗎</option>
+                  <option value="6">?</option>
+                </select>
+              </div>
+              <div class="form-group multi-inputs">
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="lecture" type="checkbox"/>
+                  <label class="custom-control-label" for="lecture">Lecture</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="Coupon" type="checkbox"/>
+                  <label class="custom-control-label" for="Coupon">Coupon</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="Message" type="checkbox"/>
+                  <label class="custom-control-label" for="Message">Message</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="Setting" type="checkbox"/>
+                  <label class="custom-control-label" for="Setting">Setting</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="taskMenu" type="checkbox"/>
+                  <label class="custom-control-label" for="taskMenu">task menu</label>
+                </div>
+              </div>
+              <h4 class="mb-3">Deactivate Account</h4>
+              <div class="text-danger mb-2 custom-alert"><span class="material-icons align-middle mr-1">warning</span><span>This cannot be undone!</span></div>
+              <button class="btn btn-outline-danger w-100">Deactivate This Account</button>
+              <div class="modalBtns w-100 text-right mt-5" id="js-modalToggle-target">
+                <button class="btn btn-outline-danger" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" type="button">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade addModal" id="addModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title w-100 d-flex flex-wrap">
+                <h3>New Admin</h3>
+              </div>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body d-flex justify-content-start flex-wrap pt-0">
+              <h4 class="mb-3">Account</h4>
+              <div class="form-group">
+                <label for="addName">Name</label>
+                <input class="form-control" id="editName" type="txt" value=""/>
+              </div>
+              <div class="form-group">
+                <label for="addEmail">Email</label>
+                <input class="form-control" id="editEmail" type="email" value=""/>
+              </div>
+              <h4 class="mb-3">Verification</h4>
+              <div class="form-group verificationWrap"><span class="material-icons align-middle mr-1 text-danger font-weight-bold">warning</span><span>Verified</span></div>
+              <button class="btn btn-outline-primary w-100 mb-3">Send Verification Mail</button>
+              <h4 class="mb-3">Access Level</h4>
+              <div class="form-group">
+                <select class="custom-select">
+                  <option selected="" disabled="disabled">-Choose access level-</option>
+                  <option value="Admin">Admin</option>
+                  <option value="1">你</option>
+                  <option value="2">在</option>
+                  <option value="3">看</option>
+                  <option value="4">我</option>
+                  <option value="5">嗎</option>
+                  <option value="6">?</option>
+                </select>
+              </div>
+              <div class="form-group multi-inputs">
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="lecture" type="checkbox"/>
+                  <label class="custom-control-label" for="lecture">Lecture</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="Coupon" type="checkbox"/>
+                  <label class="custom-control-label" for="Coupon">Coupon</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="Message" type="checkbox"/>
+                  <label class="custom-control-label" for="Message">Message</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="Setting" type="checkbox"/>
+                  <label class="custom-control-label" for="Setting">Setting</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" id="taskMenu" type="checkbox"/>
+                  <label class="custom-control-label" for="taskMenu">task menu</label>
+                </div>
+              </div>
+              <div class="modalBtns w-100 text-right mt-5" id="js-modalToggle-target">
+                <button class="btn btn-outline-danger" type="button" data-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" type="button">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
