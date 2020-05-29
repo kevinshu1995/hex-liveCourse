@@ -3,19 +3,154 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap"/>
-    <title>document</title>
+    <title>Week05 - Bootstrap | assignment</title>
     <link rel="stylesheet" href="assets/style/all.css"/>
     <script src="assets/js/vendors.js"></script>
     <script src="assets/js/all.js"></script>
   </head>
   <body>
-    <nav class="nav"></nav>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top h-100 flex-column justify-content-start align-items-start pl-0"><a class="navbar-brand pl-4" href="#">Navbar</a>
-      <div class="navbar-nav flex-column"><a class="nav-item nav-link pl-4 active" href="#">Home </a><a class="nav-item nav-link pl-4" href="#">Features</a><a class="nav-item nav-link pl-4" href="#">Pricing</a></div>
-      <div class="navbar-nav flex-column mt-auto"><a class="nav-item nav-link pl-4" href="#">Pricing</a></div>
+    <nav class="navbar navbar-light bg-light fixed-top h-100 flex-column justify-content-start align-items-start"><a class="navbar-brand nav-pl" href="#"><img src="assets/images/logo-ANSWER.svg" alt="logo"/></a>
+      <div class="navbar-nav flex-column w-100" id="sideBar"><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">assessment</span><span class="nav-item__txt">Dashboard</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">question_answer</span><span class="nav-item__txt">Question</span></a><a class="nav-item nav-link nav-pl" id="sideBar-assignment" href="index.html"> <span class="material-icons pr-3">assignment</span><span class="nav-item__txt">Assignment</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">video_library</span><span class="nav-item__txt">Course</span></a><a class="nav-item nav-link nav-pl" id="sideBar-admin" href="admin.html"><span class="material-icons pr-3">group</span><span class="nav-item__txt">Admin</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">settings</span><span class="nav-item__txt">Settings</span></a></div>
+      <div class="navbar-nav flex-column mt-auto w-100"><a class="nav-item nav-link userBlock d-flex" href="#">
+          <div class="avatar"><img class="img-fluid" src="assets/images/andychen.jpeg" alt=""/></div>
+          <div class="account pl-3">
+            <h2 class="mb-0">Andy Chen</h2>
+            <p class="mb-0">andy0401@mail.com</p>
+          </div></a></div>
     </nav>
-    <footer class="footer"></footer>
+    <nav class="navbar navbar-light bg-light fixed-top h-100 flex-column justify-content-start align-items-start"><a class="navbar-brand nav-pl" href="#"><img src="assets/images/logo-ANSWER.svg" alt="logo"/></a>
+      <div class="navbar-nav flex-column w-100" id="sideBar"><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">assessment</span><span class="nav-item__txt">Dashboard</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">question_answer</span><span class="nav-item__txt">Question</span></a><a class="nav-item nav-link nav-pl" id="sideBar-assignment" href="index.html"> <span class="material-icons pr-3">assignment</span><span class="nav-item__txt">Assignment</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">video_library</span><span class="nav-item__txt">Course</span></a><a class="nav-item nav-link nav-pl" id="sideBar-admin" href="admin.html"><span class="material-icons pr-3">group</span><span class="nav-item__txt">Admin</span></a><a class="nav-item nav-link nav-pl" href="#"> <span class="material-icons pr-3">settings</span><span class="nav-item__txt">Settings</span></a></div>
+      <div class="navbar-nav flex-column mt-auto w-100"><a class="nav-item nav-link userBlock d-flex" href="#">
+          <div class="avatar"><img class="img-fluid" src="assets/images/andychen.jpeg" alt=""/></div>
+          <div class="account pl-3">
+            <h2 class="mb-0">Andy Chen</h2>
+            <p class="mb-0">andy0401@mail.com</p>
+          </div></a></div>
+    </nav>
+    <main class="main">
+      <ul class="nav pageHead">
+        <li class="nav-item pageHead__title">Assignment</li>
+        <li class="nav-item dropdown pageHead__function mr-auto"><a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+             All Courses<span class="material-icons align-middle">keyboard_arrow_down</span></a>
+          <div class="dropdown-menu"><a class="dropdown-item" href="#">不要偷看我</a><a class="dropdown-item" href="#">不要偷看我</a><a class="dropdown-item" href="#">不要偷看我</a>
+            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">不明所以的分開</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#"><span class="material-icons">search</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><span class="material-icons">notifications_active</span></a></li>
+      </ul>
+      <section class="pageSection container-fluid">
+        <div class="row">
+          <div class="tasksTitle col-4">
+            <div class="dropdown mb-2">
+              <div class="font-weight-bold" id="dropdownMenuButton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All (4)<span class="material-icons align-middle text-primary ml-2">keyboard_arrow_down</span></div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="#">不要偷看我</a><a class="dropdown-item" href="#">不要偷看我</a><a class="dropdown-item" href="#">不要偷看我</a><a class="dropdown-item" href="#">不要偷看我</a><a class="dropdown-item" href="#">不要偷看我</a></div>
+            </div>
+            <div class="list-group">
+              <div class="list-group-item list-group-item-action d-flex justify-content-between active" role="button">
+                <div class="list-group__title">
+                  <p class="mb-1">Chapter Assignment 2</p>
+                  <h3>Please check this file…</h3>
+                </div>
+                <div class="list-group__sub text-right">
+                  <p class="mb-1">4 hrs ago</p>
+                  <p>Emily Wang</p>
+                </div>
+              </div>
+              <div class="list-group-item list-group-item-action" role="button">
+                <div class="list-group__title">
+                  <p class="mb-1">Chapter Assignment 1</p>
+                  <h3>My Homework</h3>
+                </div>
+                <div class="list-group__sub text-right">
+                  <p class="mb-1">12 hrs ago</p>
+                  <p>David Xu</p>
+                </div>
+              </div>
+              <div class="list-group-item list-group-item-action" role="button">
+                <div class="list-group__title">
+                  <p class="mb-1">Final Assignment</p>
+                  <h3>Have a problem with this…</h3>
+                </div>
+                <div class="list-group__sub text-right">
+                  <p class="mb-1">18 hrs ago</p>
+                  <p>Tony Wei</p>
+                </div>
+              </div>
+              <div class="list-group-item list-group-item-action" role="button">
+                <div class="list-group__title">
+                  <p class="mb-1">Final Assignment</p>
+                  <h3>Did I do it right?</h3>
+                </div>
+                <div class="list-group__sub text-right">
+                  <p class="mb-1">19 hrs ago</p>
+                  <p>Christina Lin</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tasksContent col-8">
+            <p class="text-right mb-2">2 comments</p>
+            <div class="card">
+              <div class="card-header">
+                <p class="mb-1">Final Assignment</p>
+                <h3>Did I do it right?</h3>
+              </div>
+              <ul class="card-body">
+                <li>
+                  <div class="card-title">
+                    <div class="avatar"><img class="img-fluid" src="assets/images/emilywang.jpeg" alt=""/></div>
+                    <div class="detail">
+                      <div class="userData">
+                        <h4>Emily Wang</h4>
+                        <p>10:38 AM (4 hours ago)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <p class="card-text">
+                       Hi Teacher, the attached file is my homework of chapter 2.
+                      And here comes a question: Why in the following code the height of the<span class="text--code">div </span>is bigger than the height of the <span class="text--code">img </span>? There is a gap below the image, but it doesn’t seems to be a padding/margin. What is the gap or extra space below image?
+                    </p><a class="btn btn-green-bg border-green-bg-darken" href="#"><span class="material-icons">attach_file</span>HW-2-David.zip</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="card-title">
+                    <div class="avatar"><img class="img-fluid" src="assets/images/andychen.jpeg" alt=""/></div>
+                    <div class="detail">
+                      <div class="userData">
+                        <h4>Andy Chen (You) </h4>
+                        <p>13:24 AM (1 hours ago)</p>
+                      </div>
+                      <div class="functions"><span class="material-icons">star_outline</span><span class="material-icons">edit</span></div>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <p class="card-text">
+                       Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on.
+                      There is space below that line for the descenders you find on letters like g, j, p and q. <br/><br/>You can:
+                      <ul>
+                        <li>adjust the <span class="text--code">vertical-align </span>of the image to position it elsewhere (e.g. the <span class="text--code">middle </span>)</li>
+                        <li>change the <span class="text--code">display </span>so it isn’t inline.</li>
+                      </ul>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="tasksFooter d-flex justify-content-between mt-3">
+              <div class="arrow-group"><span class="material-icons mr-3" role="button">keyboard_arrow_left</span><span class="material-icons" role="button">keyboard_arrow_right</span></div>
+              <div class="btnsWrap d-flex">
+                <div class="btn btn-outline-primary">Mark as read</div>
+                <div class="btn btn-primary">Reply</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
