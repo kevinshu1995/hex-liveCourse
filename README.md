@@ -1,31 +1,22 @@
 # 六角直播切版 | hex-liveCourse
 
 ## 第一周 | 個人履歷
-<ol>
-  <li>
-    <a href="https://kevinshu1995.github.io/hex-liveCourse/week1/index.html">Github Pages Demo | Github Pages 連結</a>
-  </li>
+
+1. [Github Pages Demo | Github Pages 連結](https://kevinshu1995.github.io/hex-liveCourse/week1/index.html)
+2. [Codepen Demo | Codepen 連結](https://codepen.io/kevinshu/pen/qBOEYJY)
+
 <br>
-  <li>
-    <a href="https://codepen.io/kevinshu/pen/qBOEYJY">Codepen Demo | Codepen 連結</a>
-  </li>
-</ol>
-<br>
+
 * Codepen 使用 Pug
 
 ## 第二周 | 個人網站
-<ol>
-  <li>
-    <a href="https://kevinshu1995.github.io/hex-liveCourse/week2/public/index.html">Github Pages Demo | Github Pages 連結</a>
-  </li>
-</ol>
-<br>
+
+1. [Github Pages Demo | Github Pages 連結](https://kevinshu1995.github.io/hex-liveCourse/week2/public/index.html)
+
 * 使用 Gulp 編譯 Pug
-<br>  
 --- pug 編譯路徑 ../public
-<br>
+
 * 使用 VS Code live Sass compile 編譯 SASS
-<br>
 --- SASS 編譯路徑 ../public/dist/style
 <br>
 
@@ -33,12 +24,8 @@
 
 1. [Github Pages Demo | Github Pages 連結](https://kevinshu1995.github.io/hex-liveCourse/week3/public/index.html)
 
-<br>
-
 * 使用 Gulp 編譯 Pug
   --- pug 編譯路徑 ../public
-<br>
-
 * 使用 VS Code live Sass compile 編譯 SASS
   --- SASS 編譯路徑 ../public/dist/style
 <br>
@@ -47,11 +34,7 @@
 
 1. [Github Pages Demo | Github Pages 連結](https://kevinshu1995.github.io/hex-liveCourse/week5/dist/index.html)
 
-<br>
-
 * 使用 Gulp 編譯 Pug、SCSS、JS
-<br>
-
 * 套件: JQuery, Bootstrap 4
 
 <br>
@@ -68,11 +51,7 @@
 
 1. *[Github Pages Demo | Github Pages 連結](https://kevinshu1995.github.io/hex-liveCourse/week7/dist/index.html)* 暫無
 
-<br>
-
 * 使用 Gulp 編譯 Pug、SCSS、JS
-<br>
-
 * 套件: JQuery, Bootstrap 4, AOS
 
 <br>

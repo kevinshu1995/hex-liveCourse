@@ -1,0 +1,14 @@
+extend ./modules/layout.pug
+
+block append head
+    title document
+    link(rel="stylesheet" href="assets/style/all.css")
+    script(src="assets/js/vendors.js")
+    script(src="assets/js/all.js")
+    //- icons  https://material.io/tools/icons/?style=baseline
+
+
+block content
+    div test content
+block footer
+    include ./modules/footer
