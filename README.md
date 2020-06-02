@@ -49,7 +49,7 @@
 
 *沿用第一周版型試做npm 引入AOS 套件，並套用Animate CSS動畫效果*
 
-1. *[Github Pages Demo | Github Pages 連結](https://kevinshu1995.github.io/hex-liveCourse/week7/dist/index.html)* 暫無
+1. [Github Pages Demo | Github Pages 連結](https://kevinshu1995.github.io/hex-liveCourse/week7/dist/index.html)
 
 * 使用 Gulp 編譯 Pug、SCSS、JS
 * 套件: JQuery, Bootstrap 4, AOS
