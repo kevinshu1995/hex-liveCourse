@@ -5,4 +5,13 @@
 @import "./helpers/variables";
 @import "./importBS";
 
-@import "main";
+@import "./base";
+@import "./helpers/util";
+
+@import "./layout/nav";
+@import "./layout/footer";
+
+@import "./customComponet/card";
+
+@import "./layout/index";
+@import "./main";

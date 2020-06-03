@@ -1,0 +1,10 @@
+.navbar{
+    z-index: 9999;
+    @include media-breakpoint-up(md) { 
+        //special setting
+        .shopCart{
+            position: relative;
+            top: -5px;
+        }
+    }
+}
