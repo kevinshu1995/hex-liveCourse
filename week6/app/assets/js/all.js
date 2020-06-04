@@ -1,5 +1,7 @@
 console.log('Hello!');
 
 $(document).ready(() => {
-  console.log('HesSchool Hello!');
+  $('.navbar-toggler').on('click',function(e){
+    $(this).preventDefault()
+  })
 });

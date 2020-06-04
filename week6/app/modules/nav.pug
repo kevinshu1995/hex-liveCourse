@@ -1,7 +1,7 @@
 block nav
     nav.navbar.navbar-expand-md.py-3.position-absolute.w-100
         .container
-            button.navbar-toggler.border-0.custom-text-white(type='button', data-toggle='collapse', data-target='#navbarNav')
+            button.navbar-toggler.border-0.custom-text-white(type='button')
                 span.material-icons menu
             a.navbar-brand.custom-font-size-4.custom-text-white.black-md.logo-raleway.mr-0(href='#') Craftsman
             a.shopCart.mx-0.order-3(href="#")
@@ -12,6 +12,18 @@ block nav
                 li.nav-item.mr-md-3
                     a.nav-link.custom-text-white(href='#') Product
                 li.nav-item.mr-md-3
-                    a.nav-link.custom-text-white(href='#') Features
+                    a.nav-link.custom-text-white(href='#') Blog
                 li.nav-item.mr-md-3
-                    a.nav-link.custom-text-white(href='#') Pricing
+                    a.nav-link.custom-text-white(href='#') Contact
+            #custom-navPage
+                .navPage__head.d-flex.justify-content-between
+                    span.material-icons
+                    span.material-icons
+                ul.navPage__list
+                    li
+                        a(href="#") Product
+                    li
+                        a(href="#") Blog
+                    li
+                        a(href="#") Contact
+

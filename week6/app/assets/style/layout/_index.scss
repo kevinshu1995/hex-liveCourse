@@ -24,3 +24,53 @@
         height: 400px;
     }
 }
+
+.saleProduct{
+    .custom-card{
+        width: 350px;
+        
+        @include media-breakpoint-down(md){
+            width: 240px;
+            
+        }
+    }
+    .imgWrap{
+        height: 350px;
+        @include media-breakpoint-down(md){
+            height: 240px;
+        }
+        p{
+            right: 0;
+            top: 0;
+            z-index: 10;
+        }
+        img{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .text-muted{
+        position: relative;
+        &:before{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            margin: auto;
+            background-color: $s-muted;
+        }
+    }
+}
+
+.subscribe{
+    @extend %bg-norepeat-cover;
+    background-position: center;
+    .subscribe__btn{
+        padding-left: 2.75rem ;
+        padding-right: 2.75rem ;
+    }
+}
