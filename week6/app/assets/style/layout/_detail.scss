@@ -1,0 +1,16 @@
+.productDetail{
+    .imgWrap{
+        height: auto;
+        max-height: 442px;
+        p{
+            left: 0;
+            right: auto;
+        }
+    }
+    .custom-card__content__title, 
+    .custom-card__content__content, 
+    .custom-card__content__link{
+        width: auto;
+        max-width: 100%;
+    }
+}

@@ -64,8 +64,7 @@
     }
 }
 .custom-card__content__content{
-    .text-muted{
-        position: relative;
+    .Strikethrough{
         &:before{
             position: absolute;
             content: '';
@@ -77,5 +76,8 @@
             margin: auto;
             background-color: $s-muted;
         }
+    }
+    .text-muted{
+        position: relative;
     }
 }
