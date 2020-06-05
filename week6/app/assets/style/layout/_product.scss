@@ -1,0 +1,32 @@
+.filterNav {
+    a{
+        color: $s-gray-1;
+    }
+    .active{
+        color: $primary;
+    }
+}
+.productCards{
+    .card-columns{
+        column-count: 2;
+    }
+    a.custom-card:hover,
+    a.custom-card:focus{
+        text-decoration: none;
+    }
+    .imgWrap{
+        height: 161px;
+        img{
+            height: 100%;
+            width: auto;
+        }
+    }
+    @include media-breakpoint-up(md) {
+        .card-columns{
+            column-count: 3;
+        }
+        .imgWrap{
+            height: auto;
+        }
+    }
+}

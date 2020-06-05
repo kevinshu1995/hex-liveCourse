@@ -1,0 +1,145 @@
+extend ./modules/layout.pug
+
+block append head
+    - var isItIndexPage = true
+    - var pageSection = { saleProduct: false, subscribe: true}
+    - var subscribe = true
+    title Week06 - E-commerce | Product
+    link(rel="stylesheet", href="assets/style/all.css")
+    script(src="assets/js/vendors.js")
+    script(src="assets/js/all.js")
+
+block content
+    nav.filterNav.fix-nav.navbar.bg-s-gray-2
+        .container
+            ul.navbar-nav.flex-row.py-md-3.py-2.custom-font-size-md-4.custom-font-size-2
+                li.nav-item.mr-5.pr-2
+                    a.text-decoration-none.active(href="#")
+                        p.mb-0.d-inline-block All
+                        span.tiny-supertxt 24
+                li.nav-item.mr-5.pr-2
+                    a.text-decoration-none(href="#")
+                        p.mb-0.d-inline-block Bowl
+                        span.tiny-supertxt 10
+                li.nav-item.mr-5.pr-2
+                    a.text-decoration-none(href="#")
+                        p.mb-0.d-inline-block Cup
+                        span.tiny-supertxt 8
+                li.nav-item.mr-5.pr-2
+                    a.text-decoration-none(href="#")
+                        p.mb-0.d-inline-block Plate
+                        span.tiny-supertxt 3
+                li.nav-item.mr-5.pr-2
+                    a.text-decoration-none(href="#")
+                        p.mb-0.d-inline-block Vase
+                        span.tiny-supertxt 3
+    section.productCards.py-6
+        .container
+            .card-columns
+                a.custom-card.custom-card-md--imgleft.flex-column.mb-6.pb-md-3.pb-2(href="detail.html")
+                    .imgWrap.position-relative.mb-2.overflow-hidden.align-center.w-100
+                        img.w-100(src="assets/images/img-1.jpg", alt="saleProduct image")
+                        p.position-absolute.text-white.p-3.custom-font-size-1 On Sale
+                    .custom-card__content.align-items-start
+                        .custom-card__content__title.mb-1
+                            h3.font-weight-bold.custom-font-size-4 Special Clays
+                        .custom-card__content__content
+                            p.text-black
+                                | NT$1,080
+                                span.text-muted.ml-2 NT$1,200
+                a.custom-card.custom-card-md--imgleft.flex-column.mb-6.pb-md-3.pb-2(href="detail.html")
+                    .imgWrap.position-relative.mb-2.overflow-hidden.align-center.w-100
+                        img.w-100(src="assets/images/img-2.jpg", alt="saleProduct image")
+                        p.position-absolute.text-white.p-3.custom-font-size-1 On Sale
+                    .custom-card__content.align-items-start
+                        .custom-card__content__title.mb-1
+                            h3.font-weight-bold.custom-font-size-4 Limdae Cup
+                        .custom-card__content__content
+                            p.text-black
+                                | NT$2,400
+                                //- span.text-muted.ml-2 NT$1,200
+                a.custom-card.custom-card-md--imgleft.flex-column.mb-6.pb-md-3.pb-2(href="detail.html")
+                    .imgWrap.position-relative.mb-2.overflow-hidden.align-center.w-100
+                        img.w-100(src="assets/images/img-3.jpg", alt="saleProduct image")
+                        p.position-absolute.text-white.p-3.custom-font-size-1 On Sale
+                    .custom-card__content.align-items-start
+                        .custom-card__content__title.mb-1
+                            h3.font-weight-bold.custom-font-size-4 Kabi Mug
+                        .custom-card__content__content
+                            p.text-black
+                                | NT$980
+                                //- span.text-muted.ml-2 NT$1,200
+                a.custom-card.custom-card-md--imgleft.flex-column.mb-6.pb-md-3.pb-2(href="detail.html")
+                    .imgWrap.position-relative.mb-2.overflow-hidden.align-center.w-100
+                        img.w-100(src="assets/images/img-4.jpg", alt="saleProduct image")
+                        p.position-absolute.text-white.p-3.custom-font-size-1 On Sale
+                    .custom-card__content.align-items-start
+                        .custom-card__content__title.mb-1
+                            h3.font-weight-bold.custom-font-size-4 Hana Vase
+                        .custom-card__content__content
+                            p.text-black
+                                | NT$3,600
+                                span.text-muted.ml-2 NT$3,880
+                a.custom-card.custom-card-md--imgleft.flex-column.mb-6.pb-md-3.pb-2(href="detail.html")
+                    .imgWrap.position-relative.mb-2.overflow-hidden.align-center.w-100
+                        img.w-100(src="assets/images/img-5.jpg", alt="saleProduct image")
+                        p.position-absolute.text-white.p-3.custom-font-size-1 On Sale
+                    .custom-card__content.align-items-start
+                        .custom-card__content__title.mb-1
+                            h3.font-weight-bold.custom-font-size-4 Sumo Vase
+                        .custom-card__content__content
+                            p.text-black
+                                | NT$4,800
+                                //- span.text-muted.ml-2 NT$3,880
+                a.custom-card.custom-card-md--imgleft.flex-column.mb-6.pb-md-3.pb-2(href="detail.html")
+                    .imgWrap.position-relative.mb-2.overflow-hidden.align-center.w-100
+                        img.w-100(src="assets/images/img-6.jpg", alt="saleProduct image")
+                        p.position-absolute.text-white.p-3.custom-font-size-1 On Sale
+                    .custom-card__content.align-items-start
+                        .custom-card__content__title.mb-1
+                            h3.font-weight-bold.custom-font-size-4 Shiro Plate
+                        .custom-card__content__content
+                            p.text-black
+                                | NT$1,200
+                                //- span.text-muted.ml-2 NT$3,880
+                a.custom-card.custom-card-md--imgleft.flex-column.mb-6.pb-md-3.pb-2(href="detail.html")
+                    .imgWrap.position-relative.mb-2.overflow-hidden.align-center.w-100
+                        img.w-100(src="assets/images/img-7.jpg", alt="saleProduct image")
+                        p.position-absolute.text-white.p-3.custom-font-size-1 On Sale
+                    .custom-card__content.align-items-start
+                        .custom-card__content__title.mb-1
+                            h3.font-weight-bold.custom-font-size-4 Baifan Bowl
+                        .custom-card__content__content
+                            p.text-black
+                                | NT$1,800
+                                span.text-muted.ml-2 NT$1,980
+                a.custom-card.custom-card-md--imgleft.flex-column.mb-6.pb-md-3.pb-2(href="detail.html")
+                    .imgWrap.position-relative.mb-2.overflow-hidden.align-center.w-100
+                        img.w-100(src="assets/images/img-8.jpg", alt="saleProduct image")
+                        p.position-absolute.text-white.p-3.custom-font-size-1 On Sale
+                    .custom-card__content.align-items-start
+                        .custom-card__content__title.mb-1
+                            h3.font-weight-bold.custom-font-size-4 Ceramic Vase
+                        .custom-card__content__content
+                            p.text-black
+                                | NT$3,600
+                                //- span.text-muted.ml-2 NT$1,980
+                a.custom-card.custom-card-md--imgleft.flex-column.mb-6.pb-md-3.pb-2(href="detail.html")
+                    .imgWrap.position-relative.mb-2.overflow-hidden.align-center.w-100
+                        img.w-100(src="assets/images/img-9.jpg", alt="saleProduct image")
+                        p.position-absolute.text-white.p-3.custom-font-size-1 On Sale
+                    .custom-card__content.align-items-start
+                        .custom-card__content__title.mb-1
+                            h3.font-weight-bold.custom-font-size-4 Couple Collection
+                        .custom-card__content__content
+                            p.text-black
+                                | NT$2,800
+                                //- span.text-muted.ml-2 NT$1,980
+    nav.py-4.d-flex.justify-content-center
+        ul.pagination
+            li.page-item.active
+                span.page-link 1
+            li.page-item
+                a.page-link(href='#') 2
+            li.page-item
+                a.page-link(href='#') 3

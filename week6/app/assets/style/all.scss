@@ -8,10 +8,14 @@
 @import "./base";
 @import "./helpers/util";
 
+//layout
 @import "./layout/nav";
 @import "./layout/footer";
 
 @import "./customComponet/card";
 
+//page
 @import "./layout/index";
+@import "./layout/product";
+
 @import "./main";
