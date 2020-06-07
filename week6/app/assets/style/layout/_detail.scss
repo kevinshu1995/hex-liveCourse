@@ -13,4 +13,9 @@
         width: auto;
         max-width: 100%;
     }
+    .product-fix-right{
+        @include media-breakpoint-up(lg) {
+            right: 95px;
+        }
+    }
 }

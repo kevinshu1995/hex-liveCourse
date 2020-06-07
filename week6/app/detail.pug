@@ -11,27 +11,37 @@ block append head
 
 block content
     section.productDetail.fix-nav
-        .container
-            .row.flex-nowrap.mt-6
-                .col-8
-                    .custom-card.custom-card-md--imgleft.flex-column.mb-3.pb-md-3.pb-2.w-100
+        .container-lg
+            .row.flex-lg-nowrap.mt-6
+                .col-lg-8.col-12.px-0.px-lg-3
+                    .custom-card.custom-card-md--imgleft.flex-column.w-100
                         .imgWrap.position-relative.mb-6.overflow-hidden.align-center.w-100
                             img.w-100(src="assets/images/img-1.jpg", alt="saleProduct image")
                             p.position-absolute.text-white.p-4.custom-font-size-1 On Sale
-                        .row.custom-card__content.align-items-start.flex-row
-                            .col-md-7.col-12.custom-card__content__title.mb-1
-                                p.custom-font-size-3
-                                    | This beautiful light grey cup comes from Taiwan. Add some minimalist scenes to your lifetime and use this cup for tea, coffee, dessert, or to place small items as a dish tray.
-                            .col-md-5.col-12.custom-card__content__content
-                                p.text-muted
-                                    | Made in Taiwan 
-                                    br 
-                                    | 8 x 8 x 6 cm 
-                                    br
-                                    | Dishwasher and Microwave-safe
-                .col-5.position-relative
-                    .card
-                        p Home / Product / Cup
-                        h2 Tatami Cup
-                        .content
-                        .btn.btn-primary Add to cart
+                .col-lg-5.col-12.position-relative.d-flex.align-items-center.mx-3.mx-lg-0
+                    .card.product-fix-right.w-100.py-lg-5.pl-lg-5.p-3.border-0.d-flex.flex-row.flex-wrap.no-gutters
+                        p.col-12.text-muted Home / Product / Cup
+                        h2.col-12.font-weight-bold.custom-font-size-10 Tatami Cup
+                        p.col-lg-12.col-6.d-flex.flex-column.align-items-end.mb-5.order-lg-1.order-5
+                            span.text-muted.Strikethrough NT$1,200
+                            span.custom-font-size-4.font-weight-bold NT$1,080
+                        .col-lg-4.col-6.pr-2.order-lg-1.order-1
+                            .btn-group.d-flex(role='group')
+                                button.btn.btn-s-gray-2.px-0(type='button') +
+                                button.btn.btn-s-gray-2.px-0(type='button') 1
+                                button.btn.btn-s-gray-2.px-0(type='button') -
+                        .col-lg-8.col-12.order-lg-1.order-10
+                            .btn.btn-primary.w-100 Add to cart
+        .container
+            .row
+                .col-lg-8.col-12.custom-card__content.align-items-start.flex-row.flex-wrap.mb-3.pb-md-3.pb-2.no-gutters
+                    .col-lg-7.col-12.custom-card__content__title.mb-1
+                        p.custom-font-size-3
+                            | This beautiful light grey cup comes from Taiwan. Add some minimalist scenes to your lifetime and use this cup for tea, coffee, dessert, or to place small items as a dish tray.
+                    .col-lg-5.col-12.custom-card__content__content
+                        p.text-muted
+                            | Made in Taiwan 
+                            br 
+                            | 8 x 8 x 6 cm 
+                            br
+                            | Dishwasher and Microwave-safe
