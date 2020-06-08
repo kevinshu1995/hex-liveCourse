@@ -1,5 +1,5 @@
 .navbar{
-    z-index: 9999;
+    z-index: 1040;
     @include media-breakpoint-up(md) { 
         //special setting
         .shopCart{
@@ -22,10 +22,4 @@
 .collapsing {
     left: -100vw;
     transition: .3s;
-}
-
-.dropdown-toggle{
-    .js-aniToggle{
-        transition: .3s;
-    }
 }

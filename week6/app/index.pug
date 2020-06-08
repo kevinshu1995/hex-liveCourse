@@ -1,9 +1,16 @@
 extend ./modules/layout.pug
 
 block append head
+    //- false => index專用
     - var isItIndexPage = false
-    - var pageSection = { saleProduct: true, subscribe: true}
+    //- true => nav只會有logo
+    - var checkoutPage = false
+    //- true => 產品slide出現
+    - var saleProduct = true
+    //- true => subscribe出現
     - var subscribe = true
+    //- true => more u like..出現
+    - var saleProductTitle = false
     title Week06 - E-commerce
     link(rel="stylesheet" href="assets/style/all.css")
     script(src="assets/js/vendors.js")

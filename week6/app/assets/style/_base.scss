@@ -14,3 +14,12 @@ body .fix-nav{
         text-decoration: underline $primary;
     }
 }
+.breadcrumb{
+    color: $s-muted;
+    .active{
+        font-weight: bold;
+        &:before{
+            font-weight: normal;
+        }
+    }
+}

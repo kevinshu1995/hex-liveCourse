@@ -2,9 +2,10 @@ extend ./modules/layout.pug
 
 block append head
     - var isItIndexPage = true
-    - var pageSection = { saleProduct: false, subscribe: true}
+    - var saleProduct = true
     - var subscribe = true
-    title Week06 - E-commerce | Product
+    - var saleProductTitle = true
+    title Week06 - E-commerce | detail
     link(rel="stylesheet", href="assets/style/all.css")
     script(src="assets/js/vendors.js")
     script(src="assets/js/all.js")
@@ -12,14 +13,14 @@ block append head
 block content
     section.productDetail.fix-nav
         .container-lg
-            .row.flex-lg-nowrap.mt-6
+            .row.flex-lg-nowrap.mt-6.mb-6
                 .col-lg-8.col-12.px-0.px-lg-3
                     .custom-card.custom-card-md--imgleft.flex-column.w-100
-                        .imgWrap.position-relative.mb-6.overflow-hidden.align-center.w-100
+                        .imgWrap.position-relative.overflow-hidden.align-center.w-100
                             img.w-100(src="assets/images/img-1.jpg", alt="saleProduct image")
                             p.position-absolute.text-white.p-4.custom-font-size-1 On Sale
-                .col-lg-5.col-12.position-relative.d-flex.align-items-center.mx-3.mx-lg-0
-                    .card.product-fix-right.w-100.py-lg-5.pl-lg-5.p-3.border-0.d-flex.flex-row.flex-wrap.no-gutters
+                .col-lg-5.col-12.position-relative.d-flex.align-items-center.px-3.px-lg-0
+                    .card.product-fix-right-top.w-100.py-lg-5.pl-lg-5.p-3.border-0.d-flex.flex-row.flex-wrap.no-gutters
                         p.col-12.text-muted Home / Product / Cup
                         h2.col-12.font-weight-bold.custom-font-size-10 Tatami Cup
                         p.col-lg-12.col-6.d-flex.flex-column.align-items-end.mb-5.order-lg-1.order-5
@@ -27,21 +28,83 @@ block content
                             span.custom-font-size-4.font-weight-bold NT$1,080
                         .col-lg-4.col-6.pr-2.order-lg-1.order-1
                             .btn-group.d-flex(role='group')
-                                button.btn.btn-s-gray-2.px-0(type='button') +
+                                button.btn.btn-s-gray-2.px-0(type='button')
+                                    span.material-icons add
                                 button.btn.btn-s-gray-2.px-0(type='button') 1
-                                button.btn.btn-s-gray-2.px-0(type='button') -
+                                button.btn.btn-s-gray-2.px-0(type='button')
+                                    span.material-icons remove
                         .col-lg-8.col-12.order-lg-1.order-10
-                            .btn.btn-primary.w-100 Add to cart
-        .container
-            .row
-                .col-lg-8.col-12.custom-card__content.align-items-start.flex-row.flex-wrap.mb-3.pb-md-3.pb-2.no-gutters
-                    .col-lg-7.col-12.custom-card__content__title.mb-1
-                        p.custom-font-size-3
-                            | This beautiful light grey cup comes from Taiwan. Add some minimalist scenes to your lifetime and use this cup for tea, coffee, dessert, or to place small items as a dish tray.
-                    .col-lg-5.col-12.custom-card__content__content
-                        p.text-muted
-                            | Made in Taiwan 
-                            br 
-                            | 8 x 8 x 6 cm 
-                            br
-                            | Dishwasher and Microwave-safe
+                            .btn.btn-primary.w-100(data-toggle="modal" data-target="#shopCart") Add to cart
+        .container-lg
+            .row.mb-6.mb-lg-7
+                .col-lg-5.col-12.custom-card__content__title.mb-lg-0.mb-3
+                    p.custom-font-size-3
+                        | This beautiful light grey cup comes from Taiwan. Add some minimalist scenes to your lifetime and use this cup for tea, coffee, dessert, or to place small items as a dish tray.
+                .col-lg-3.col-12.custom-card__content__content.mb-lg-0
+                    p.text-muted
+                        | Made in Taiwan 
+                        br 
+                        | 8 x 8 x 6 cm 
+                        br
+                        | Dishwasher and Microwave-safe
+    aside#shopCart.modal.fade.pr-0.h-100(tabindex='-1', role='dialog')
+        .modal-dialog.my-0.ml-auto.mr-0.h-100.fix-modal-maxHeight.modal-dialog-scrollable
+            .modal-content.h-100.rounded-0.border-0.p-md-6.p-3.fix-modal-maxHeight
+                .modal-header.border-0.p-0.mb-3.mb-md-4.align-items-center
+                    h5.modal-title.custom-font-size-md-10.custom-font-size-4.font-weight-bold Cart List
+                        span.tiny-supertxt.text-primary.ml-2 24
+                    button.close.custom-font-size-md-10.custom-font-size-4(type='button', data-dismiss='modal', aria-label='Close')
+                        span(aria-hidden='true') ×
+                .modal-body.p-0.mb-3.flex-grow-0
+                    .custom-card.w-100.d-flex.mb-2.position-relative
+                        .imgWrap.position-relative.overflow-hidden.align-center.h-100
+                            img(src="assets/images/img-1.jpg", alt="saleProduct image")
+                        .custom-card__content.bg-s-gray-2.align-items-start.flex-grow-1.p-md-3.p-2
+                            .custom-card__content__title
+                                h3.font-weight-bold.custom-font-size-2 Special Clays
+                            .custom-card__content__content
+                                p.text-content
+                                    | NT$1,080
+                                    span.text-muted.ml-2.Strikethrough.custom-font-size-1 NT$1,200
+                            .custom-card__content__footer.d-flex.justify-content-between.w-100.mt-auto
+                                .btn-group.d-flex(role='group')
+                                    button.btn.btn-s-gray-2.p-0(type='button')
+                                        span.material-icons.custom-font-size-2 add
+                                    button.btn.btn-s-gray-2.py-0.px-3(type='button') 1
+                                    button.btn.btn-s-gray-2.p-0(type='button')
+                                        span.material-icons.custom-font-size-2 remove
+                                p.font-weight-bold.mb-0 NT$1,080
+                            button.close.custom-font-size-6.position-absolute.py-2.px-3(type='button')
+                                span(aria-hidden='true') ×
+                    .custom-card.w-100.d-flex.mb-2.position-relative
+                        .imgWrap.position-relative.overflow-hidden.align-center.h-100
+                            img(src="assets/images/img-2.jpg", alt="saleProduct image")
+                        .custom-card__content.bg-s-gray-2.align-items-start.flex-grow-1.p-md-3.p-2
+                            .custom-card__content__title
+                                h3.font-weight-bold.custom-font-size-2 Baifan Bowl
+                            .custom-card__content__content
+                                p.text-content
+                                    | NT$1,800
+                                    //- span.text-muted.ml-2.Strikethrough.custom-font-size-1 NT$1,200
+                            .custom-card__content__footer.d-flex.justify-content-between.w-100.mt-auto
+                                .btn-group.d-flex(role='group')
+                                    button.btn.btn-s-gray-2.p-0(type='button')
+                                        span.material-icons.custom-font-size-2 add
+                                    button.btn.btn-s-gray-2.py-0.px-3(type='button') 2
+                                    button.btn.btn-s-gray-2.p-0(type='button')
+                                        span.material-icons.custom-font-size-2 remove
+                                p.font-weight-bold.mb-0 NT$3,600
+                            button.close.custom-font-size-6.position-absolute.py-2.px-3(type='button')
+                                span(aria-hidden='true') ×
+                .modal-footer.py-0.custom-pl.mb-3.border-0.mt-md-0.mt-auto
+                    .d-flex.justify-content-between.align-items-center.mb-3.mx-0.mt-0.w-100
+                        h3.text-muted.mb-0.custom-font-size-2 Subtotal
+                        p.text-muted.mb-0 NT$4,680
+                    .d-flex.justify-content-between.align-items-center.mb-4.mx-0.mt-0.w-100
+                        h3.text-muted.mb-0.custom-font-size-2 Shipping
+                        p.text-muted.mb-0 NT$80
+                    .d-flex.justify-content-between.align-items-center.mb-4.mx-0.mt-0.w-100
+                        h3.text-black.font-weight-bold.mb-0.custom-font-size-4 Total
+                        p.text-black.font-weight-bold.mb-0 NT$4,760
+                    a.btn.btn-primary.w-100.m-0(href="checkout-info.html") Checkout
+
