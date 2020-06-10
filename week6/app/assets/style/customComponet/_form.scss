@@ -1,0 +1,51 @@
+.form-column-merge{
+    .labelInInput{
+        & + .labelInInput{
+            margin-top: -1px;
+        }
+        input{
+            border-radius: 0;
+        }
+        &:nth-of-type(1) input{
+            border-radius: 0.25rem 0.25rem 0 0;
+        }
+        &:nth-last-of-type(1) input{
+            border-radius: 0 0 0.25rem 0.25rem;
+        }
+    }
+    input{
+        border-radius: 0;
+        & + input{
+            margin-top: -1px;
+        }
+        &:nth-of-type(1){
+            border-radius: 0.25rem 0.25rem 0 0;
+        }
+        &:nth-last-of-type(1){
+            border-radius: 0 0 0.25rem 0.25rem;
+        }
+    }
+}
+.labelInInput{
+    position: relative;
+    label,.material-icons{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    input{
+        padding-left: 5.625rem;
+    }
+    label{
+        height: 1.5em;
+        left: 1rem;
+    }
+    .fix-material-icons-padding{
+        padding-right: 3rem;
+    }
+    .material-icons{
+        right: 1rem;
+        height: 1em;
+    }
+}

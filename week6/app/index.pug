@@ -1,7 +1,7 @@
 extend ./modules/layout.pug
 
 block append head
-    //- false => index專用
+    //- false => index專用(去掉其他連結)
     - var isItIndexPage = false
     //- true => nav只會有logo
     - var checkoutPage = false
@@ -11,6 +11,8 @@ block append head
     - var subscribe = true
     //- true => more u like..出現
     - var saleProductTitle = false
+    //- true => footer 不出現
+    - var footerShow = false
     title Week06 - E-commerce
     link(rel="stylesheet" href="assets/style/all.css")
     script(src="assets/js/vendors.js")

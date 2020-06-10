@@ -6,7 +6,7 @@ block footer
                     if !checkoutPage
                         a.d-block.navbar-brand.custom-font-size-4.logo-raleway.mb-md-0.mb-5.text-white(href='index.html') Craftsman
                         p.text-muted.mb-0.mr-md-auto.order-md-0.order-1 © 2020. All Rights Reserved.
-                    ul.navbar-nav.flex-md-row.mb-md-0.mb-5
+                    ul.navbar-nav.flex-md-row.mb-md-0(class=( checkoutPage ? " " : "mb-5"))
                         li.nav-item.mr-md-6
                             a.nav-link(href="#" class=( checkoutPage ? "text-content" : "text-white")) Purchase Policy
                         li.nav-item.mr-md-6

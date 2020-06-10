@@ -1,0 +1,26 @@
+extend ./modules/layout.pug
+
+block append head
+    title Week06 - E-commerce | Done
+    //- false => index專用
+    - var isItIndexPage = false
+    //- true => nav只會有logo
+    - var checkoutPage = true
+    //- true => footer 不出現
+    - var footerShow = true
+    link(rel="stylesheet", href="assets/style/all.css")
+    script(src="assets/js/vendors.js")
+    script(src="assets/js/all.js")
+
+block content
+    section.landingPage.position-relative
+        .landingPage-image.before-bg-dark.custom-before-opacity-md-0.custom-before-opacity-3(style="background-image:url(assets/images/done.jpg)")
+        .container
+            .row
+                .col-12.col-md-6.d-flex.flex-column.align-items-center.align-items-md-start.justify-content-center.vh-100.custom-text-white.black-md.py-4
+                    h1.custom-font-size-10.mb-4.mt-auto.mt-md-0.font-weight-bold
+                        | Well Done!
+                    p.custom-font-size-2.custom-font-size-md-4.mb-md-6.mb-auto
+                        | Your order has been received. We’II email you an order confirmation with details.
+                    a.btn.btn-primary.w-md-100(role="button" href="product.html") Continue shopping
+

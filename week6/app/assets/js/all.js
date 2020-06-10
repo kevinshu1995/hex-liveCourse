@@ -3,9 +3,15 @@ $(function(){
   $('.dropdown-toggle').on('click',function(){
     $(this).find('.js-aniToggle').toggleClass('rotate-180')
   })
+  $('#js-toggle-show').hide();
   //checkoutPage
-  $('#toggleCardBtn').on('click',function(){
-    $(this).find('.material-icons').toggleClass('rotate-180')
+  $('#toggleCard').on('show.bs.collapse', function () {
+    $(this).siblings('#toggleCardBtn').find('.material-icons').removeClass('rotate-180')
+    $('#js-toggle-show').hide();
+  })
+  $('#toggleCard').on('hide.bs.collapse', function () {
+    $(this).siblings('#toggleCardBtn').find('.material-icons').addClass('rotate-180')
+    $('#js-toggle-show').show();
   })
   $(window).resize(function(){
     if($('#toggleCard').is(':hidden')) $('#toggleCardBtn').trigger('click')

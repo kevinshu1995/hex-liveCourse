@@ -14,11 +14,15 @@
     a.custom-card:focus{
         text-decoration: none;
     }
+    h3{
+        color: $black;
+    }
     .imgWrap{
         height: 161px;
-        img{
-            height: 100%;
-            width: auto;
+        @include media-breakpoint-down(sm) {
+            img{
+                width: 100%;
+            }
         }
     }
     @include media-breakpoint-up(md) {
@@ -27,6 +31,18 @@
         }
         .imgWrap{
             height: auto;
+        }
+        .img-lg{
+            height: 480px;
+            width: auto;
+        }
+        .img-md{
+            height: 350px;
+            width: auto;
+        }
+        .img-sm{
+            height: 240px;
+            width: auto;
         }
     }
 }

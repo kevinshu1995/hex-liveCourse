@@ -4,7 +4,11 @@
         width: 100%;
     }
 }
-
+a.custom-card{
+    h3{
+        color: $black;
+    }
+}
 .custom-card{
     width: 350px;
     @include media-breakpoint-down(md){

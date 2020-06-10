@@ -58,6 +58,10 @@ $font-size-range: 10;
     }
 }
 
+//flex
+.flex-basis-auto{
+    flex-basis: auto;
+}
 
 
 //special txt style
@@ -87,5 +91,26 @@ $font-size-range: 10;
         height: 1px;
         margin: auto;
         background-color: $s-muted;
+    }
+}
+
+.before-bg-dark{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        left: 0;
+        top: 0;
+    }
+}
+.custom-before-opacity-3::before{
+    opacity: .3;
+}
+.custom-before-opacity-md-0::before{
+    @include media-breakpoint-up(md){
+        opacity: 0;
     }
 }
