@@ -5,4 +5,9 @@ html(lang="en")
     body
         include ./nav.pug
         block content
-        include ./footer.pug
+        if saleProduct
+            include ./saleProduct.pug
+        if subscribe
+            include ./subscribe.pug
+        if !footerShow
+            include ./footer.pug

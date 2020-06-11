@@ -5,4 +5,20 @@
 @import "./helpers/variables";
 @import "./importBS";
 
-@import "main";
+@import "./base";
+@import "./helpers/util";
+
+//layout
+@import "./layout/nav";
+@import "./layout/footer";
+
+@import "./customComponet/card";
+@import "./customComponet/form";
+
+//page
+@import "./layout/index";
+@import "./layout/product";
+@import "./layout/detail";
+@import "./layout/checkout";
+
+@import "./main";

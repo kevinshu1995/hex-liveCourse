@@ -1,0 +1,89 @@
+extend ./modules/layout.pug
+
+block append head
+    - var isItIndexPage = true
+    - var checkoutPage = true
+    title Week06 - E-commerce | Checkout - Payment
+    link(rel="stylesheet", href="assets/style/all.css")
+    script(src="assets/js/vendors.js")
+    script(src="assets/js/all.js")
+
+block content
+    section.checkoutPage.fix-nav
+        .container
+            .row
+                nav.col-12.order-lg-1.order-5.mb-lg-4.mb-3(aria-label='breadcrumb')
+                    ol.breadcrumb.p-0
+                        li.breadcrumb-item
+                            a(href='#') Cart
+                        li.breadcrumb-item(aria-current='page') Information
+                        li.breadcrumb-item.active(aria-current='page') Payment
+                .col-lg-6.col-12.order-lg-3.order-7
+                    h2.text-dark.mb-2.custom-font-size-3 Information
+                    .form-group.form-column-merge
+                        .labelInInput
+                            label(for="contact") Contact
+                            input#contact.form-control.fix-material-icons-padding(type="text" placeholder="Joanne Lin / Joanne@mail.com / +886 912-345-678")
+                            span.material-icons.text-primary keyboard_arrow_down
+                        .labelInInput
+                            label(for="ship") Ship to
+                            input#ship.form-control.fix-material-icons-padding(type="text" placeholder="3F., No. 2, Ln. 1, Hello 2nd Rd., Woohoo Dist., Kaohsiung…")
+                            span.material-icons.text-primary keyboard_arrow_down
+                    h2.text-dark.mb-2.custom-font-size-3 Credit Card
+                    .form-row.mb-5
+                        .col-12.mb-2
+                            input.form-control(type="text" placeholder="Card number")
+                        .col-12.mb-2
+                            input.form-control(type="text" placeholder="Name on card")
+                        .col-lg-6.col-12.mb-2
+                            input.form-control(type="text" placeholder="Expiration date (MM / YY)")
+                        .col-lg-6.col-12.mb-2
+                            input.form-control(type="text" placeholder="Security code")
+                .col-lg-4.col-12.order-lg-5.order-1.mb-lg-0.mb-4
+                    .bg-s-gray-2.p-md-5.p-3.rounded
+                        .d-flex.d-lg-none.d-block.justify-content-between#toggleCardBtn.user-select-none(role="button" data-toggle="collapse" data-target="#toggleCard")
+                            p.mb-0 Order Summary
+                            p.text-dark.font-weight-bold.ml-auto.mb-0.mr-2#js-toggle-show NT$4,760
+                            span.material-icons.text-primary.transition-3s keyboard_arrow_up
+                        #toggleCard.show
+                            .custom-card.w-100.d-flex.pb-3.position-relative.mt-lg-0.mt-5
+                                .imgWrap.position-relative.overflow-hidden.align-center
+                                    img.h-100(src="assets/images/img-1.jpg", alt="saleProduct image")
+                                .custom-card__content.align-items-center.justify-content-between.flex-row.flex-grow-1.w-100.pl-3
+                                    .custom-card__content__title.w-auto
+                                        h3.font-weight-bold.custom-font-size-2 Baifan Bowl
+                                            span.font-weight-normal  ×1
+                                    .custom-card__content__content.w-auto
+                                        p.text-content
+                                            | NT$1,800
+                            .custom-card.w-100.d-flex.pb-3.position-relative
+                                .imgWrap.position-relative.overflow-hidden.align-center
+                                    img.h-100(src="assets/images/img-2.jpg", alt="saleProduct image")
+                                .custom-card__content.align-items-center.justify-content-between.flex-row.flex-grow-1.w-100.pl-3
+                                    .custom-card__content__title.w-auto
+                                        h3.font-weight-bold.custom-font-size-2 Baifan Bowl
+                                            span.font-weight-normal   ×2
+                                    .custom-card__content__content.w-auto
+                                        p.text-content
+                                            | NT$1,800
+                            .py-0.custom-pl.pt-3.mt-auto.border-top
+                                .d-flex.justify-content-between.align-items-center.mb-lg-3.mb-2.mx-0.mt-0.w-100
+                                    h3.text-black.mb-0.custom-font-size-2 Subtotal
+                                    p.text-black.mb-0 NT$4,680
+                                .d-flex.justify-content-between.align-items-center.mb-3.mx-0.mt-0.w-100
+                                    h3.text-black.mb-0.custom-font-size-2 Shipping
+                                    p.text-black.mb-0 NT$80
+                                .d-flex.justify-content-between.align-items-center.w-100.border-top.pt-3
+                                    h3.text-black.font-weight-bold.mb-0.custom-font-size-4 Total
+                                    p.text-black.font-weight-bold.mb-0.custom-font-size-4 NT$4,760
+                .col-lg-6.col-12.order-10.d-flex.no-gutters.align-items-center.justify-content-center.border-bottom.pb-5.flex-lg-row.flex-column-reverse
+                    .col-lg-6.col-12.text-center.d-flex.align-items-center.justify-content-center.flex-basis-auto
+                        a.text-primary.d-block.py-3.w-100(href="checkout-info.html") 
+                            span.material-icons navigate_before
+                            | Return to information
+                    .col-lg-6.col-12.flex-basis-auto
+                        a.btn.btn-primary.w-100(href="donePay.html") Pay now
+                
+
+
+

@@ -1,2 +1,46 @@
 block nav
-    nav.nav
+    nav.navbar.navbar-expand-md.py-3.position-absolute.w-100( class=( isItIndexPage ? "bg-white" : ""))
+        .container
+            if !checkoutPage
+                button.navbar-toggler.border-0(type='button' data-target="#custom-navPage"  data-toggle="collapse" class=( isItIndexPage ? "text-dark" : "custom-text-white"))
+                    span.material-icons menu
+            a.navbar-brand.custom-font-size-4.black-md.logo-raleway.mr-0(href='index.html' class=( isItIndexPage ? "text-dark" : "custom-text-white")) Craftsman
+            if !checkoutPage
+                a.shopCart.mx-0.order-3(href="#")
+                    .nav-link.p-2
+                        span.material-icons(class=( isItIndexPage ? "text-dark" : "custom-text-white")) shopping_cart
+                #navbarNav.collapse.navbar-collapse
+                  ul.navbar-nav.ml-auto
+                    li.nav-item.mr-md-3
+                        a.nav-link(href='#'  class=( isItIndexPage ? "text-dark" : "custom-text-white")) Product
+                    li.nav-item.mr-md-3
+                        a.nav-link(href='#'  class=( isItIndexPage ? "text-dark" : "custom-text-white")) Blog
+                    li.nav-item.mr-md-3
+                        a.nav-link(href='#'  class=( isItIndexPage ? "text-dark" : "custom-text-white")) Contact
+                #custom-navPage.custom-navPage.position-fixed.bg-white.w-100.h-100.py-3.collapse
+                    .navPage__head.d-flex.justify-content-between.px-3
+                        a(href="#custom-navPage" data-toggle="collapse")
+                            span.material-icons.text-dark keyboard_backspace
+                        a(href="#")
+                            span.material-icons.text-dark shopping_cart
+                    ul.navPage__list.list-group.list-group-flush.pt-3
+                        li.list-group-item.position-relative.dropdown.list-group-item-action
+                            a.text-dark.custom-font-size-4.stretched-link.dropdown-toggle.d-flex.justify-content-between.text-decoration-none.py-2(href="#" data-toggle="dropdown") 
+                                span Product
+                                span.material-icons.align-middle.js-aniToggle.transition-3s expand_more
+                            .dropdown-menu.position-relative.m-0.w-100
+                                a.dropdown-item.text-content(href="#") ALL
+                                    span.tiny-supertxt 24
+                                a.dropdown-item.text-content(href="#") Bowl
+                                    span.tiny-supertxt 10
+                                a.dropdown-item.text-content(href="#") Cup
+                                    span.tiny-supertxt 8
+                                a.dropdown-item.text-content(href="#") Plate
+                                    span.tiny-supertxt 3
+                                a.dropdown-item.text-content(href="#") Vase
+                                    span.tiny-supertxt 3
+                        li.list-group-item.position-relative.list-group-item-action
+                            a.text-dark.custom-font-size-4.stretched-link.text-decoration-none.py-2.d-block(href="#") Blog
+                        li.list-group-item.position-relative.list-group-item-action
+                            a.text-dark.custom-font-size-4.stretched-link.text-decoration-none.py-2.d-block(href="#") Contact
+
