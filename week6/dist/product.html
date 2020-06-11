@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&amp;display=swap"/>
+    <title>Week06 - E-commerce | Product</title>
+    <link rel="stylesheet" href="assets/style/all.css"/>
+    <script src="assets/js/vendors.js"></script>
+    <script src="assets/js/all.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md py-3 position-absolute w-100 bg-white">
+      <div class="container">
+        <button class="navbar-toggler border-0 text-dark" type="button" data-target="#custom-navPage" data-toggle="collapse"><span class="material-icons">menu</span></button><a class="navbar-brand custom-font-size-4 black-md logo-raleway mr-0 text-dark" href="index.html">Craftsman</a><a class="shopCart mx-0 order-3" href="#">
+          <div class="nav-link p-2"><span class="material-icons text-dark">shopping_cart</span></div></a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-md-3"><a class="nav-link text-dark" href="#">Product</a></li>
+            <li class="nav-item mr-md-3"><a class="nav-link text-dark" href="#">Blog</a></li>
+            <li class="nav-item mr-md-3"><a class="nav-link text-dark" href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="custom-navPage position-fixed bg-white w-100 h-100 py-3 collapse" id="custom-navPage">
+          <div class="navPage__head d-flex justify-content-between px-3"><a href="#custom-navPage" data-toggle="collapse"><span class="material-icons text-dark">keyboard_backspace</span></a><a href="#"><span class="material-icons text-dark">shopping_cart</span></a></div>
+          <ul class="navPage__list list-group list-group-flush pt-3">
+            <li class="list-group-item position-relative dropdown list-group-item-action"><a class="text-dark custom-font-size-4 stretched-link dropdown-toggle d-flex justify-content-between text-decoration-none py-2" href="#" data-toggle="dropdown"> <span>Product</span><span class="material-icons align-middle js-aniToggle transition-3s">expand_more</span></a>
+              <div class="dropdown-menu position-relative m-0 w-100"><a class="dropdown-item text-content" href="#">ALL<span class="tiny-supertxt">24</span></a><a class="dropdown-item text-content" href="#">Bowl<span class="tiny-supertxt">10</span></a><a class="dropdown-item text-content" href="#">Cup<span class="tiny-supertxt">8</span></a><a class="dropdown-item text-content" href="#">Plate<span class="tiny-supertxt">3</span></a><a class="dropdown-item text-content" href="#">Vase<span class="tiny-supertxt">3</span></a></div>
+            </li>
+            <li class="list-group-item position-relative list-group-item-action"><a class="text-dark custom-font-size-4 stretched-link text-decoration-none py-2 d-block" href="#">Blog</a></li>
+            <li class="list-group-item position-relative list-group-item-action"><a class="text-dark custom-font-size-4 stretched-link text-decoration-none py-2 d-block" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="filterNav fix-nav navbar bg-s-gray-2">
+      <div class="container">
+        <ul class="navbar-nav flex-row py-md-3 py-2 custom-font-size-md-4 custom-font-size-2">
+          <li class="nav-item mr-5 pr-2"><a class="text-decoration-none active" href="#">
+              <p class="mb-0 d-inline-block">All</p><span class="tiny-supertxt">24</span></a></li>
+          <li class="nav-item mr-5 pr-2"><a class="text-decoration-none" href="#">
+              <p class="mb-0 d-inline-block">Bowl</p><span class="tiny-supertxt">10</span></a></li>
+          <li class="nav-item mr-5 pr-2"><a class="text-decoration-none" href="#">
+              <p class="mb-0 d-inline-block">Cup</p><span class="tiny-supertxt">8</span></a></li>
+          <li class="nav-item mr-5 pr-2"><a class="text-decoration-none" href="#">
+              <p class="mb-0 d-inline-block">Plate</p><span class="tiny-supertxt">3</span></a></li>
+          <li class="nav-item mr-5 pr-2"><a class="text-decoration-none" href="#">
+              <p class="mb-0 d-inline-block">Vase</p><span class="tiny-supertxt">3</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="productCards py-6">
+      <div class="container">
+        <div class="card-columns"><a class="custom-card custom-card-md--imgleft flex-column mb-6 pb-md-3 pb-2" href="detail.html">
+            <div class="imgWrap position-relative mb-2 overflow-hidden align-center w-100"><img class="img-md" src="assets/images/img-1.jpg" alt="saleProduct image"/>
+              <p class="position-absolute text-white p-3 custom-font-size-1">On Sale</p>
+            </div>
+            <div class="custom-card__content align-items-start">
+              <div class="custom-card__content__title mb-1">
+                <h3 class="font-weight-bold custom-font-size-4">Special Clays</h3>
+              </div>
+              <div class="custom-card__content__content">
+                <p class="text-black">NT$1,080<span class="text-muted ml-2 Strikethrough">NT$1,200</span></p>
+              </div>
+            </div></a><a class="custom-card custom-card-md--imgleft flex-column mb-6 pb-md-3 pb-2" href="detail.html">
+            <div class="imgWrap position-relative mb-2 overflow-hidden align-center w-100"><img class="img-sm" src="assets/images/img-2.jpg" alt="saleProduct image"/>
+              <p class="position-absolute text-white p-3 custom-font-size-1">On Sale</p>
+            </div>
+            <div class="custom-card__content align-items-start">
+              <div class="custom-card__content__title mb-1">
+                <h3 class="font-weight-bold custom-font-size-4">Limdae Cup</h3>
+              </div>
+              <div class="custom-card__content__content">
+                <p class="text-black">NT$2,400</p>
+              </div>
+            </div></a><a class="custom-card custom-card-md--imgleft flex-column mb-6 pb-md-3 pb-2" href="detail.html">
+            <div class="imgWrap position-relative mb-2 overflow-hidden align-center w-100"><img class="img-lg" src="assets/images/img-3.jpg" alt="saleProduct image"/>
+              <p class="position-absolute text-white p-3 custom-font-size-1">On Sale</p>
+            </div>
+            <div class="custom-card__content align-items-start">
+              <div class="custom-card__content__title mb-1">
+                <h3 class="font-weight-bold custom-font-size-4">Kabi Mug</h3>
+              </div>
+              <div class="custom-card__content__content">
+                <p class="text-black">NT$980</p>
+              </div>
+            </div></a><a class="custom-card custom-card-md--imgleft flex-column mb-6 pb-md-3 pb-2" href="detail.html">
+            <div class="imgWrap position-relative mb-2 overflow-hidden align-center w-100"><img class="img-lg" src="assets/images/img-4.jpg" alt="saleProduct image"/>
+              <p class="position-absolute text-white p-3 custom-font-size-1">On Sale</p>
+            </div>
+            <div class="custom-card__content align-items-start">
+              <div class="custom-card__content__title mb-1">
+                <h3 class="font-weight-bold custom-font-size-4">Hana Vase</h3>
+              </div>
+              <div class="custom-card__content__content">
+                <p class="text-black">NT$3,600<span class="text-muted ml-2 Strikethrough">NT$3,880</span></p>
+              </div>
+            </div></a><a class="custom-card custom-card-md--imgleft flex-column mb-6 pb-md-3 pb-2" href="detail.html">
+            <div class="imgWrap position-relative mb-2 overflow-hidden align-center w-100"><img class="img-md" src="assets/images/img-5.jpg" alt="saleProduct image"/>
+              <p class="position-absolute text-white p-3 custom-font-size-1">On Sale</p>
+            </div>
+            <div class="custom-card__content align-items-start">
+              <div class="custom-card__content__title mb-1">
+                <h3 class="font-weight-bold custom-font-size-4">Sumo Vase</h3>
+              </div>
+              <div class="custom-card__content__content">
+                <p class="text-black">NT$4,800</p>
+              </div>
+            </div></a><a class="custom-card custom-card-md--imgleft flex-column mb-6 pb-md-3 pb-2" href="detail.html">
+            <div class="imgWrap position-relative mb-2 overflow-hidden align-center w-100"><img class="img-sm" src="assets/images/img-6.jpg" alt="saleProduct image"/>
+              <p class="position-absolute text-white p-3 custom-font-size-1">On Sale</p>
+            </div>
+            <div class="custom-card__content align-items-start">
+              <div class="custom-card__content__title mb-1">
+                <h3 class="font-weight-bold custom-font-size-4">Shiro Plate</h3>
+              </div>
+              <div class="custom-card__content__content">
+                <p class="text-black">NT$1,200</p>
+              </div>
+            </div></a><a class="custom-card custom-card-md--imgleft flex-column mb-6 pb-md-3 pb-2" href="detail.html">
+            <div class="imgWrap position-relative mb-2 overflow-hidden align-center w-100"><img class="img-sm" src="assets/images/img-7.jpg" alt="saleProduct image"/>
+              <p class="position-absolute text-white p-3 custom-font-size-1">On Sale</p>
+            </div>
+            <div class="custom-card__content align-items-start">
+              <div class="custom-card__content__title mb-1">
+                <h3 class="font-weight-bold custom-font-size-4">Baifan Bowl</h3>
+              </div>
+              <div class="custom-card__content__content">
+                <p class="text-black">NT$1,800<span class="text-muted ml-2 Strikethrough">NT$1,980</span></p>
+              </div>
+            </div></a><a class="custom-card custom-card-md--imgleft flex-column mb-6 pb-md-3 pb-2" href="detail.html">
+            <div class="imgWrap position-relative mb-2 overflow-hidden align-center w-100"><img class="img-lg" src="assets/images/img-8.jpg" alt="saleProduct image"/>
+              <p class="position-absolute text-white p-3 custom-font-size-1">On Sale</p>
+            </div>
+            <div class="custom-card__content align-items-start">
+              <div class="custom-card__content__title mb-1">
+                <h3 class="font-weight-bold custom-font-size-4">Ceramic Vase</h3>
+              </div>
+              <div class="custom-card__content__content">
+                <p class="text-black">NT$3,600</p>
+              </div>
+            </div></a><a class="custom-card custom-card-md--imgleft flex-column mb-6 pb-md-3 pb-2" href="detail.html">
+            <div class="imgWrap position-relative mb-2 overflow-hidden align-center w-100"><img class="img-md" src="assets/images/img-9.jpg" alt="saleProduct image"/>
+              <p class="position-absolute text-white p-3 custom-font-size-1">On Sale</p>
+            </div>
+            <div class="custom-card__content align-items-start">
+              <div class="custom-card__content__title mb-1">
+                <h3 class="font-weight-bold custom-font-size-4">Couple Collection</h3>
+              </div>
+              <div class="custom-card__content__content">
+                <p class="text-black">NT$2,800</p>
+              </div>
+            </div></a></div>
+      </div>
+    </section>
+    <nav class="py-4 d-flex justify-content-center">
+      <ul class="pagination">
+        <li class="page-item active"><span class="page-link">1</span></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+      </ul>
+    </nav>
+    <section class="subscribe" style="background-image: url(assets/images/footer.jpg)">
+      <div class="container py-md-10 py-4">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h2 class="custom-font-size-6 custom-font-size-md-8 text-white font-weight-bold mb-md-6 mb-4">Subscribe for news and special offers!</h2>
+            <div class="input-group">
+              <input class="form-control bg-transparent" type="text" placeholder="Your email address"/>
+              <div class="input-group-append">
+                <button class="btn btn-primary subscribe__btn" id="button-addon2" type="button">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between navbar py-4 py-md-5 flex-md-row flex-column align-items-md-center align-items-start"><a class="d-block navbar-brand custom-font-size-4 logo-raleway mb-md-0 mb-5 text-white" href="index.html">Craftsman</a>
+            <p class="text-muted mb-0 mr-md-auto order-md-0 order-1">© 2020. All Rights Reserved.</p>
+            <ul class="navbar-nav flex-md-row mb-md-0 mb-5">
+              <li class="nav-item mr-md-6"><a class="nav-link text-white" href="#">Purchase Policy</a></li>
+              <li class="nav-item mr-md-6"><a class="nav-link text-white" href="#">Privacy Policy</a></li>
+              <li class="nav-item"><a class="nav-link text-white" href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

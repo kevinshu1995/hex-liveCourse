@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&amp;display=swap"/>
+    <title>Week06 - E-commerce | Checkout - Payment</title>
+    <link rel="stylesheet" href="assets/style/all.css"/>
+    <script src="assets/js/vendors.js"></script>
+    <script src="assets/js/all.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md py-3 position-absolute w-100 bg-white">
+      <div class="container"><a class="navbar-brand custom-font-size-4 black-md logo-raleway mr-0 text-dark" href="index.html">Craftsman</a>
+      </div>
+    </nav>
+    <section class="checkoutPage fix-nav">
+      <div class="container">
+        <div class="row">
+          <nav class="col-12 order-lg-1 order-5 mb-lg-4 mb-3" aria-label="breadcrumb">
+            <ol class="breadcrumb p-0">
+              <li class="breadcrumb-item"><a href="#">Cart</a></li>
+              <li class="breadcrumb-item" aria-current="page">Information</li>
+              <li class="breadcrumb-item active" aria-current="page">Payment</li>
+            </ol>
+          </nav>
+          <div class="col-lg-6 col-12 order-lg-3 order-7">
+            <h2 class="text-dark mb-2 custom-font-size-3">Information</h2>
+            <div class="form-group form-column-merge">
+              <div class="labelInInput">
+                <label for="contact">Contact</label>
+                <input class="form-control fix-material-icons-padding" id="contact" type="text" placeholder="Joanne Lin / Joanne@mail.com / +886 912-345-678"/><span class="material-icons text-primary">keyboard_arrow_down</span>
+              </div>
+              <div class="labelInInput">
+                <label for="ship">Ship to</label>
+                <input class="form-control fix-material-icons-padding" id="ship" type="text" placeholder="3F., No. 2, Ln. 1, Hello 2nd Rd., Woohoo Dist., Kaohsiung…"/><span class="material-icons text-primary">keyboard_arrow_down</span>
+              </div>
+            </div>
+            <h2 class="text-dark mb-2 custom-font-size-3">Credit Card</h2>
+            <div class="form-row mb-5">
+              <div class="col-12 mb-2">
+                <input class="form-control" type="text" placeholder="Card number"/>
+              </div>
+              <div class="col-12 mb-2">
+                <input class="form-control" type="text" placeholder="Name on card"/>
+              </div>
+              <div class="col-lg-6 col-12 mb-2">
+                <input class="form-control" type="text" placeholder="Expiration date (MM / YY)"/>
+              </div>
+              <div class="col-lg-6 col-12 mb-2">
+                <input class="form-control" type="text" placeholder="Security code"/>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-12 order-lg-5 order-1 mb-lg-0 mb-4">
+            <div class="bg-s-gray-2 p-md-5 p-3 rounded">
+              <div class="d-flex d-lg-none d-block justify-content-between user-select-none" id="toggleCardBtn" role="button" data-toggle="collapse" data-target="#toggleCard">
+                <p class="mb-0">Order Summary</p>
+                <p class="text-dark font-weight-bold ml-auto mb-0 mr-2" id="js-toggle-show">NT$4,760</p><span class="material-icons text-primary transition-3s">keyboard_arrow_up</span>
+              </div>
+              <div class="show" id="toggleCard">
+                <div class="custom-card w-100 d-flex pb-3 position-relative mt-lg-0 mt-5">
+                  <div class="imgWrap position-relative overflow-hidden align-center"><img class="h-100" src="assets/images/img-1.jpg" alt="saleProduct image"/></div>
+                  <div class="custom-card__content align-items-center justify-content-between flex-row flex-grow-1 w-100 pl-3">
+                    <div class="custom-card__content__title w-auto">
+                      <h3 class="font-weight-bold custom-font-size-2">Baifan Bowl<span class="font-weight-normal"> ×1</span></h3>
+                    </div>
+                    <div class="custom-card__content__content w-auto">
+                      <p class="text-content">NT$1,800</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="custom-card w-100 d-flex pb-3 position-relative">
+                  <div class="imgWrap position-relative overflow-hidden align-center"><img class="h-100" src="assets/images/img-2.jpg" alt="saleProduct image"/></div>
+                  <div class="custom-card__content align-items-center justify-content-between flex-row flex-grow-1 w-100 pl-3">
+                    <div class="custom-card__content__title w-auto">
+                      <h3 class="font-weight-bold custom-font-size-2">Baifan Bowl<span class="font-weight-normal">  ×2</span></h3>
+                    </div>
+                    <div class="custom-card__content__content w-auto">
+                      <p class="text-content">NT$1,800</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="py-0 custom-pl pt-3 mt-auto border-top">
+                  <div class="d-flex justify-content-between align-items-center mb-lg-3 mb-2 mx-0 mt-0 w-100">
+                    <h3 class="text-black mb-0 custom-font-size-2">Subtotal</h3>
+                    <p class="text-black mb-0">NT$4,680</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mb-3 mx-0 mt-0 w-100">
+                    <h3 class="text-black mb-0 custom-font-size-2">Shipping</h3>
+                    <p class="text-black mb-0">NT$80</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center w-100 border-top pt-3">
+                    <h3 class="text-black font-weight-bold mb-0 custom-font-size-4">Total</h3>
+                    <p class="text-black font-weight-bold mb-0 custom-font-size-4">NT$4,760</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 order-10 d-flex no-gutters align-items-center justify-content-center border-bottom pb-5 flex-lg-row flex-column-reverse">
+            <div class="col-lg-6 col-12 text-center d-flex align-items-center justify-content-center flex-basis-auto"><a class="text-primary d-block py-3 w-100" href="checkout-info.html"> <span class="material-icons">navigate_before</span>Return to information</a></div>
+            <div class="col-lg-6 col-12 flex-basis-auto"><a class="btn btn-primary w-100" href="donePay.html">Pay now</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-between navbar py-4 py-md-5 flex-md-row flex-column align-items-md-center align-items-start">
+            <ul class="navbar-nav flex-md-row mb-md-0  ">
+              <li class="nav-item mr-md-6"><a class="nav-link text-content" href="#">Purchase Policy</a></li>
+              <li class="nav-item mr-md-6"><a class="nav-link text-content" href="#">Privacy Policy</a></li>
+              <li class="nav-item"><a class="nav-link text-content" href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
