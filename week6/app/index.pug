@@ -1,0 +1,76 @@
+extend ./modules/layout.pug
+
+block append head
+    //- false => index專用(去掉其他連結)
+    - var isItIndexPage = false
+    //- true => nav只會有logo
+    - var checkoutPage = false
+    //- true => 產品slide出現
+    - var saleProduct = true
+    //- true => subscribe出現
+    - var subscribe = true
+    //- true => more u like..出現
+    - var saleProductTitle = false
+    //- true => footer 不出現
+    - var footerShow = false
+    title Week06 - E-commerce
+    link(rel="stylesheet" href="assets/style/all.css")
+    script(src="assets/js/vendors.js")
+    script(src="assets/js/all.js")
+    //- icons  https://material.io/tools/icons/?style=baseline
+block content
+    section.landingPage.position-relative.mb-7
+        .landingPage-image(style="background-image:url(assets/images/index-1.jpg)")
+        .container
+            .row
+                .col-12.col-md-6.d-flex.flex-column.align-items-center.align-items-md-start.justify-content-center.vh-100.custom-text-white.black-md.py-4
+                    h1.custom-font-size-10.mb-3.mt-auto.mt-md-0.font-weight-bold
+                        | Enjoy Your 
+                        br
+                        | Minimalist Lifestyle.
+                    p.custom-font-size-2.custom-font-size-md-4.mb-md-4.mb-auto
+                        | The best crafts in Taiwan. Get your free shipping on the first order.
+                    a.btn.btn-primary.w-md-100(role="button" href="product.html") Shop now
+    section.feature.mb-7
+        .container
+            .row.custom-card.custom-card-md--imgleft.mb-3.pb-md-3.pb-2
+                img.col-12.col-md-6.img-fluid.mb-md-0.mb-3(src="assets/images/index-2.jpg", alt="feature image")
+                .custom-card__content.col-12.col-md-6
+                    .custom-card__content__title.mb-2
+                        h3.font-weight-bold.custom-font-size-4 Special Clays
+                    .custom-card__content__content.mb-4
+                        p.text-content A general body formulation for contemporary earthenware is 25% kaolin, 25% ball clay, 35% quartz and 15% feldspar.
+                    .custom-card__content__link 
+                        a(href="#") learn more
+            .row.custom-card.custom-card-md--imgright.mb-3.pb-md-3.pb-2
+                img.col-12.col-md-6.img-fluid.mb-md-0.mb-3(src="assets/images/index-3.jpg", alt="feature image")
+                .custom-card__content.col-12.col-md-6
+                    .custom-card__content__title.mb-2
+                        h3.font-weight-bold.custom-font-size-4 Less is more
+                    .custom-card__content__content.mb-4
+                        p.text-content Trimming pottery can transform a weighty Earth-bound pot into one that is a pleasure to hold, look at, and use.
+                    .custom-card__content__link 
+                        a(href="#") learn more
+            .row.custom-card.custom-card-md--imgleft
+                img.col-12.col-md-6.img-fluid.mb-md-0.mb-3(src="assets/images/index-4.jpg", alt="feature image")
+                .custom-card__content.col-12.col-md-6
+                    .custom-card__content__title.mb-2
+                        h3.font-weight-bold.custom-font-size-4 Marvelous Detail
+                    .custom-card__content__content.mb-4
+                        p.text-content 
+                            | In 
+                            span.font-italic Craftsman,
+                            |  the art director, working with marketers, develops or creates an idea of a new creation.
+                    .custom-card__content__link 
+                        a(href="#") learn more
+    section.artist.mb-7(style="background-image: url(assets/images/index-5.jpg)")
+        .container
+            .row
+                .col-12.d-flex.flex-column.flex-md-row.justify-content-between.align-items-md-center.align-items-start.h-400.text-white.py-4
+                    h2.custom-font-size-6 “I want to make the life more simple by crafts.”
+                    .d-flex.flex-column
+                        p.text-subTitle-light.mb-1 Art Director
+                        h3.custom-font-size-4.mb-2 hsiao-Ming Chen
+                        .d-flex
+                            a.mr-4(href="#") Instagram
+                            a(href="#") Twitter

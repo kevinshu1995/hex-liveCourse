@@ -1,0 +1,25 @@
+.material-icons{
+    vertical-align: middle;
+}
+body{
+    position: relative;
+}
+body .fix-nav{
+    padding-top: 78px;
+    padding-bottom: 0;
+    z-index: 1;
+}
+.pagination{
+    .active{
+        text-decoration: underline $primary;
+    }
+}
+.breadcrumb{
+    color: $s-muted;
+    .active{
+        font-weight: bold;
+        &:before{
+            font-weight: normal;
+        }
+    }
+}

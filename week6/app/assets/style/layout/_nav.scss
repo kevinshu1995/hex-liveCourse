@@ -1,0 +1,25 @@
+.navbar{
+    z-index: 1040;
+    @include media-breakpoint-up(md) { 
+        //special setting
+        .shopCart{
+            position: relative;
+            top: -5px;
+        }
+    }
+}
+.custom-navPage{
+    left: 0;
+    top: 0;
+    transition: .3s;
+    .dropdown-toggle::after{
+        border-width: 0px;
+    }
+    .material-icons{
+        line-height: 1.5em;
+    }
+}
+.collapsing {
+    left: -100vw;
+    transition: .3s;
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include ./head.pug
+    body
+        include ./nav.pug
+        block content
+        if saleProduct
+            include ./saleProduct.pug
+        if subscribe
+            include ./subscribe.pug
+        if !footerShow
+            include ./footer.pug
