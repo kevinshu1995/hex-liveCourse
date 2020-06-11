@@ -1,0 +1,12 @@
+extend ./modules/layout.pug
+
+block append head
+    title document
+    link(rel="stylesheet", href="assets/style/all.css")
+    script(src="assets/js/vendors.js")
+    script(src="assets/js/all.js")
+
+block content
+    div test content
+block footer
+    include ./modules/footer
