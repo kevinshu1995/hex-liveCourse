@@ -1,23 +1,23 @@
-$color: #00cc99;
+// font-family: 'Raleway', sans-serif;
+// font-family: 'open sans', sans-serif;
+@import "functions";
+// 自定義BS變數
+@import "./helpers/variables";
+@import "./importBS";
 
-.header {
-  height: 200px;
-  background-color: #00cc99;
-}
+@import "./base";
+@import "./helpers/util";
 
-.footer {
-  height: 200px;
-  background-color: #00cc99;
-}
+//layout
+@import "./layout/nav";
+@import "./layout/footer";
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  display: flex;
-  transition: all 0.5s;
-  &:hover {
-    width: 200px;
-    background-color: $color;
-  }
-}
+@import "./customComponet/card";
+@import "./customComponet/form";
+
+//page
+@import "./layout/index";
+@import "./layout/product";
+@import "./layout/detail";
+@import "./layout/checkout";
+

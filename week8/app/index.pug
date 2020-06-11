@@ -1,12 +1,13 @@
 extend ./modules/layout.pug
 
 block append head
-    title document
+    //-pug modules
+    - var something = false
+
+    title Week08 -
     link(rel="stylesheet", href="assets/style/all.css")
     script(src="assets/js/vendors.js")
     script(src="assets/js/all.js")
 
 block content
     div test content
-block footer
-    include ./modules/footer
