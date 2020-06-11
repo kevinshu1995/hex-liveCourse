@@ -41,7 +41,10 @@
 
 ## 第六周 | 電商網站
 
-1. *[Github Pages Demo | Github Pages 連結](https://kevinshu1995.github.io/hex-liveCourse/week6/dist/index.html)* 暫無
+1. [Github Pages Demo | Github Pages 連結](https://kevinshu1995.github.io/hex-liveCourse/week6/dist/index.html)
+
+* 使用 Gulp 編譯 Pug、SCSS、JS
+* 套件: JQuery, Bootstrap 4
 
 <br>
 
