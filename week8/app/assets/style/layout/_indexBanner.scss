@@ -1,0 +1,12 @@
+.indexBanner{
+    .carousel{
+        overflow: hidden;
+        max-height: 320px;
+        @include media-breakpoint-down(xs){
+            max-height: 315px;
+        }
+    }
+    .img-mt-n50percent{
+        margin-top: -50%;
+    }
+}

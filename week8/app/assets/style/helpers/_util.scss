@@ -1,10 +1,23 @@
 //logo的部分
-.logo-raleway{
+.font-family-raleway{
     font-family: $font-family-raleway;
-    font-weight: $font-weight-bold;
 }
 
-//text-color
+//responsible text-color
+@each $breakpoint, $grid-breakpoint in $grid-breakpoints {
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        @each $name, $color in $colors{
+            .custom-text-#{$breakpoint}-#{$name}{
+                color: $color !important;
+            }
+        }
+        @each $name, $color in $theme-colors{
+            .custom-text-#{$breakpoint}-#{$name}{
+                color: $color !important;
+            }
+        }
+    }
+}
 .custom-text-white{
     color: $white;
     &:hover,
