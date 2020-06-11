@@ -42,6 +42,10 @@ let envOptions = {
       `${srcPath}/assets/style/**/*.scss`,
       `${srcPath}/assets/style/**/*.sass`,
     ],
+    outputStyle: 'expanded',
+    includePaths: [
+      `${nodePath}/bootstrap/scss`,
+    ],
     path: `${distPath}/assets/style`,
   },
   javascript: {
@@ -54,6 +58,7 @@ let envOptions = {
   vendors: {
     src: [
       `${nodePath}/jquery/dist/**/jquery.min.js`,
+      `${nodePath}/bootstrap/dist/js/**/bootstrap.bundle.min.js`, // 已包含 popper.js
     ],
     concat: 'vendors.js',
     path: `${distPath}/assets/js`,
