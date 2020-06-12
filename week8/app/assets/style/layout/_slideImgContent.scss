@@ -1,0 +1,15 @@
+.slideImgContent{
+    .card{
+        width: 350px;
+        min-width: unset;
+        @include media-breakpoint-down(sm){
+            width: 240px;
+        }
+    }
+    .imgWrap{
+        height: 263px;
+        @include media-breakpoint-down(sm){
+            height: 180px;
+        }
+    }
+}

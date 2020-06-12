@@ -1,0 +1,17 @@
+.tabChoice{
+    .card{
+        min-width: unset;
+    }
+    .imgWrap{
+        width: 255px;
+        height: 175px;
+        @include media-breakpoint-down(md){
+            width: 270px;
+            height: 185px;
+        }
+        @include media-breakpoint-down(sm){
+            width: 240px;
+            height: 164px;
+        }
+    }
+}

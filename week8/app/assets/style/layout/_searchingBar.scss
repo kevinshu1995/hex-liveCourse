@@ -1,0 +1,23 @@
+.custom-unfilled{
+    border-radius: .5rem;
+    .container{
+        width: 100%;
+        max-width: unset;
+        padding: 0;
+    }
+    margin: auto;
+    max-width: 920px;
+    @include media-breakpoint-down(md){
+        max-width: 570px;
+    }
+    @include media-breakpoint-down(sm){
+        max-width: 330px;
+    }
+}
+.searchingBar .form-row .material-icons{
+    left: 1.5rem;
+    top: 0;
+    bottom: 0;
+    height: 1em;
+    margin: auto;
+}

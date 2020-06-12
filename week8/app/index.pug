@@ -12,4 +12,24 @@ block append head
 block content
     section.indexBanner.fix-nav
         include ./modules/indexBanner.pug
-    section.fix-nav test content
+    section.searchingBar.custom-unfilled.mt-n8.bg-bg-grey.mb-9
+        include ./modules/searchingBar.pug
+    section.tabChoice.mb-md-10.mb-3
+        .container
+            .row
+                h2.col-12.font-family-raleway.custom-font-size-md-6.custom-font-size-4.mb-4 Top Choices
+                include ./modules/tabChoice.pug
+    section.popular.mb-md-7.mb-6
+        .container
+            .row
+                h2.col-12.font-family-raleway.custom-font-size-md-6.custom-font-size-4.mb-4 Popular Destinations
+                include ./modules/imgBtn.pug
+    section.slideImgContent.mb-md-10.mb-7
+        .container
+            .row
+                .col-12.d-flex.justify-content-between.mb-4
+                    h2.font-family-raleway.custom-font-size-md-6.custom-font-size-4.mb-0 Get Inspiration
+                    a.btn.btn-outline-primary.btn-sm.custom-font-size-1.customs-font-size-14(href="#") SEE MORE
+                .d-flex.flex-wrap.overflow-hidden.w-100
+                    include ./modules/slideImgContext.pug
+
