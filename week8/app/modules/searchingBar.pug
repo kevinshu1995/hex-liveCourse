@@ -1,15 +1,71 @@
 block searchingBar
     .container
-        .row.py-4.px-2.no-gutters
-            .form-row.col-lg-10.px-2.mx-0
-                .col-lg-4.mb-lg-0.mb-3
-                  input.form-control.pl-8.position-relative(type='text', placeholder='Destination')
-                  span.material-icons.position-absolute place
-                .col-lg-4.mb-lg-0.mb-3
-                  input.form-control.pl-8.position-relative(type='text', placeholder='Check-in / Check-out')
-                  span.material-icons.position-absolute event_note
-                .col-lg-4.mb-lg-0.mb-3
-                  input.form-control.pl-8.position-relative(type='text', placeholder='Guests')
-                  span.material-icons.position-absolute person
-            .col-lg-2.px-lg-2.px-2.mx-2.mx-lg-n2
-                a.btn.btn-primary.w-100(href="#") Search
+        .row(class=(isItIndexPage ? "px-2 py-4 no-gutters" : "py-3 py-md-4"))
+            .form-row.mx-0(class=(isItIndexPage ? "col-lg-10 px-2" : "col-md-10"))
+                if isItIndexPage
+                    .col-lg-4.dropdown.mb-lg-0.mb-3
+                        a#dropdownDestination.btn.btn-light.btn-outline-secondary.dropdown-toggle.position-relative.pl-8.w-100(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                            | DESTINATION 
+                            span.material-icons.position-absolute place
+                        .dropdown-menu(aria-labelledby='dropdownDestination')
+                            a.dropdown-item.d-flex.flex-wrap(href='#') 
+                                span.material-icons.custom-font-size-2.mr-1.ml-0 star
+                                span.ml-1 Bangkok
+                                span.custom-font-size-1.text-content.d-inline-block.w-100.ml-4 Thailand
+                            a.dropdown-item.d-flex.flex-wrap(href='#') 
+                                span.material-icons.custom-font-size-2.mr-1.ml-0 star
+                                span.ml-1 Osaka
+                                span.custom-font-size-1.text-content.d-inline-block.w-100.ml-4 Japan
+                            a.dropdown-item.d-flex.flex-wrap(href='#') 
+                                span.material-icons.custom-font-size-2.mr-1.ml-0 star
+                                span.ml-1 Roma
+                                span.custom-font-size-1.text-content.d-inline-block.w-100.ml-4 Italy
+                            a.dropdown-item.d-flex.flex-wrap(href='#') 
+                                span.material-icons.custom-font-size-2.mr-1.ml-0 star
+                                span.ml-1 Paris
+                                span.custom-font-size-1.text-content.d-inline-block.w-100.ml-4 London
+                            a.dropdown-item.d-flex.flex-wrap(href='#') 
+                                span.material-icons.custom-font-size-2.mr-1.ml-0 star
+                                span.ml-1 Reykjvik
+                                span.custom-font-size-1.text-content.d-inline-block.w-100.ml-4 Iceland
+                    .col-lg-4.mb-lg-0.mb-3
+                        input.form-control.pl-8.position-relative(type='text', placeholder='CHECK-IN / CHECK-OUT')
+                        span.material-icons.position-absolute event_note
+                    .col-lg-4.mb-lg-0.mb-3
+                        input.form-control.pl-8.position-relative(type='text', placeholder='GUESTS')
+                        span.material-icons.position-absolute person
+                else
+                    .col-4.pl-0.pr-md-2.pr-0.text-center
+                        a.btn.btn-white.position-relative.w-100.text-left.pl-7.py-2.d-md-flex.flex-column.d-none(href='#', role='button')
+                            span.material-icons.position-absolute.left-point75rem place
+                            span.text-dark.font-weight-bold.custom-font-size-1 DESTINATION
+                            span.customs-font-size-14.text-content.d-inline-block.w-100
+                                | Bangkok,Thailand
+                        p.d-md-none.d-block.customs-font-size-14.mb-0 Bangkok
+                    .col-4.pl-0.pr-md-2.pr-0.text-center
+                        a.btn.btn-white.position-relative.w-100.text-left.pl-7.py-2.d-lg-block.d-none(href='#', role='button')
+                            span.material-icons.position-absolute.left-point75rem event_note
+                            .d-flex.no-gutters
+                                .col-6.d-flex.flex-column
+                                    span.text-dark.font-weight-bold.custom-font-size-1 CHECK-IN
+                                    span.customs-font-size-14.text-content.d-inline-block.w-100
+                                        | 17 June
+                                .col-6.d-flex.flex-column
+                                    span.text-dark.font-weight-bold.custom-font-size-1 CHECK-OUT
+                                    span.customs-font-size-14.text-content.d-inline-block.w-100
+                                        | 19 June
+                        a.btn.btn-white.position-relative.w-100.text-left.pl-7.py-2.d-md-flex.flex-column.d-none.d-lg-none(href='#', role='button')
+                            span.material-icons.position-absolute.left-point75rem event_note
+                            span.text-dark.font-weight-bold.custom-font-size-1 CHECK-IN / OUT
+                            span.customs-font-size-14.text-content.d-inline-block.w-100
+                                | 17 June - 19 June
+                        p.d-md-none.d-block.customs-font-size-14.mb-0.border-left.border-white 17 June - 19 June
+                    .col-4.px-0.text-center
+                        a.btn.btn-white.position-relative.w-100.text-left.pl-7.py-2.d-md-flex.flex-column.d-none(href='#', role='button')
+                            span.material-icons.position-absolute.left-point75rem person
+                            span.text-dark.font-weight-bold.custom-font-size-1 GUESTS
+                            span.customs-font-size-14.text-content.d-inline-block.w-100
+                                | 2 adults・1 room
+                        p.d-md-none.d-block.customs-font-size-14.mb-0.border-left.border-white 2 adults・1 room
+            .mx-2(class=(isItIndexPage ? "col-lg-2 mx-lg-n2 px-lg-2 px-2" : "col-md-2 mx-md-n2 px-md-2 d-md-block d-none"))
+                a.btn.btn-primary.w-100(href="result.html") Search

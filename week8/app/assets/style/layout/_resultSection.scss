@@ -1,0 +1,16 @@
+.resultSection{
+    .nav{
+        a{
+            color: $black;
+            &:hover{
+                color: lighten($black,15%)
+            }
+        }
+        .active{
+            color: $primary;
+            &:hover{
+                color: lighten($primary,15%)
+            }
+        }
+    }
+}

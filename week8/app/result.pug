@@ -1,0 +1,51 @@
+extend ./modules/layout.pug
+
+block append head
+    //-pug modules
+    - var something = false
+
+    title Week08 - Searching Result
+    link(rel="stylesheet", href="assets/style/all.css")
+    script(src="assets/js/vendors.js")
+    script(src="assets/js/all.js")
+
+block content
+    section.searchingBar.bg-bg-grey.fix-nav.mb-md-4.mb-3
+        include ./modules/searchingBar.pug
+    section.resultSection
+        .container
+            .row
+                .col-md-4.col-12.mb-md-4.mb-2
+                    h2.font-weight-bold.custom-font-size-6 Bangkok
+                        span.tiny-supertxt.text-primary 3240
+                .col-md-8.d-flex.align-items-end.mb-md-4
+                    ul.nav
+                        li.nav-item.mr-md-4.mr-0
+                            a.font-weight-bold.nav-link.p-0.active(href="#") Recommended
+                        li.nav-item.mr-md-4.mr-0
+                            a.font-weight-bold.nav-link.p-0(href="#") Lowest Price
+                        li.nav-item.mr-md-4.mr-0
+                            a.font-weight-bold.nav-link.p-0(href="#") Best value
+                        li.nav-item
+                            a.font-weight-bold.nav-link.p-0(href="#") Distance to City Center
+                .col-md-4
+                    .card.border-0.bg-bg-grey
+                        .card-body
+                            .form-group
+                                h3 Deals
+                                .form-check
+                                    input#freeCancellation.form-check-input(type='checkbox')
+                                    label.form-check-label(for='freeCancellation') Free cancellation
+                                .form-check
+                                    input#noPrepayment.form-check-input(type='checkbox')
+                                    label.form-check-label(for='noPrepayment') No prepayment
+                                .form-check
+                                    input#SpecialOffers.form-check-input(type='checkbox')
+                                    label.form-check-label(for='SpecialOffers') Special offers
+
+                .col-md-8
+                    | 123
+    section.subscribe.bg-bg-grey
+        .container
+            .row.align-items-center.py-4.h-auto
+                include ./modules/subscribe.pug
